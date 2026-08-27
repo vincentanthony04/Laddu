@@ -21,7 +21,7 @@ from datetime import date, timedelta
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
-from config import DATA_DIR, INSTRUMENT_URLS, TOKEN_FILE, TOKEN_HELPER, UPSTOX_BASE_URL
+from config import DATA_DIR, INSTRUMENT_URLS, LINUX_TOKEN_FILE, TOKEN_FILE, TOKEN_HELPER, UPSTOX_BASE_URL
 from models import now_iso
 from core.fundamental_scoring_authority import DEFAULT_FUNDAMENTAL_SCORING_AUTHORITY
 from core.fundamental_dimension_authority import DEFAULT_FUNDAMENTAL_DIMENSION_AUTHORITY
@@ -197,7 +197,21 @@ class UpstoxClient:
         if self._token_cache and now - self._token_cache_ts < 600:
             return self._token_cache
         if os.name != "nt":
-            return None
+            # No Windows DPAPI available. Same operating model (a script writes
+            # the token, the runtime reads it) but backed by a plain file with
+            # owner-only permissions instead of DPAPI encryption.
+            linux_token_file = Path(LINUX_TOKEN_FILE)
+            if not linux_token_file.exists():
+                return None
+            try:
+                token = linux_token_file.read_text(encoding="utf-8").strip()
+            except Exception as exc:
+                self.logger("WARN", "security", "Unable to read Linux token file", {"error": str(exc)})
+                return None
+            if token:
+                self._token_cache = token
+                self._token_cache_ts = now
+            return token or None
         if not Path(TOKEN_FILE).exists():
             return None
         # One stuck PowerShell helper should not fan out into 10 concurrent

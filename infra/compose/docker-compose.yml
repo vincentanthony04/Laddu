@@ -64,6 +64,35 @@ services:
         limits:
           memory: 3G
 
+  laddu-app:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    image: ghcr.io/vincentanthony04/laddu:latest
+    container_name: project-laddu-app
+    restart: unless-stopped
+    depends_on:
+      operational-postgres:
+        condition: service_healthy
+      governance-postgres:
+        condition: service_healthy
+      questdb:
+        condition: service_started
+    environment:
+      PROJECT_LADDU_PORT: 8086
+      PROJECT_LADDU_BIND_HOST: 0.0.0.0
+      PROJECT_LADDU_DATA_PLANE_MODE: production
+      PROJECT_LADDU_OPERATIONAL_DSN: postgresql://laddu_admin:${LADDU_OPERATIONAL_ADMIN_PASSWORD}@operational-postgres:5432/laddu_operational
+      PROJECT_LADDU_GOVERNANCE_DSN: postgresql://laddu_admin:${LADDU_GOVERNANCE_ADMIN_PASSWORD}@governance-postgres:5432/laddu_governance
+      PROJECT_LADDU_QUESTDB_HTTP_URL: http://questdb:9000
+      PROJECT_LADDU_LINUX_TOKEN_FILE: /app/secure/upstox_token.txt
+    volumes:
+      # Bind mount (not a named volume) so settoken.sh on the host writes to
+      # the exact file the container reads.
+      - ../../secure:/app/secure
+    ports:
+      - "8086:8086"
+
 volumes:
   laddu_operational_pg:
   laddu_governance_pg:

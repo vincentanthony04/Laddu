@@ -121,6 +121,9 @@ DB_PATH = (
 RUNTIME_DB_PATH = Path(os.environ.get("PROJECT_LADDU_RUNTIME_DB", str(RUNTIME_DIR / "market_session.sqlite3")))
 ANALYTICS_DB_PATH = Path(os.environ.get("PROJECT_LADDU_ANALYTICS_DB", str(ANALYTICS_DIR / "project_laddu_quant.duckdb")))
 TOKEN_FILE = SECURE_DIR / "upstox_token.dpapi"
+# Linux/Docker equivalent: no DPAPI available, so a plain owner-only file is
+# used instead. Same "run a script to write the token" model as Windows.
+LINUX_TOKEN_FILE = Path(os.environ.get("PROJECT_LADDU_LINUX_TOKEN_FILE", str(SECURE_DIR / "upstox_token.txt")))
 TOKEN_HELPER = INSTALL_DIR / "backend" / "security" / "token_helper.ps1"
 
 UPSTOX_BASE_URL = os.environ.get("UPSTOX_BASE_URL", "https://api.upstox.com")
