@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Market index mark">
+  <rect width="64" height="64" rx="12" fill="#ffffff"/>
+  <rect x="8" y="8" width="48" height="48" rx="10" fill="#f4f7fb" stroke="#cbd5e1"/>
+  <path d="M15 43 25 32l8 6 16-20" fill="none" stroke="#2563a8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="49" cy="18" r="4" fill="#10a56a"/>
+</svg>

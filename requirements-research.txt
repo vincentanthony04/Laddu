@@ -1,0 +1,12 @@
+# Project Laddu Clean Core R3 isolated Research runtime lock.
+# Exact versions only. Research dependencies cannot float inside one release.
+numpy==2.5.1
+pandas==3.0.5
+scipy==1.18.0
+scikit-learn==1.9.0
+ta==0.11.0
+duckdb==1.5.5
+lightgbm==4.6.0
+psycopg==3.3.4
+psycopg-binary==3.3.4
+psycopg-pool==3.3.1

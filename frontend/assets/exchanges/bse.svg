@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="BSE exchange mark">
+  <rect width="64" height="64" rx="12" fill="#ffffff"/>
+  <path d="M13 15h26c9 0 14 4 14 11 0 5-3 8-8 10 6 2 9 6 9 12 0 9-7 13-18 13H13V15Z" fill="#ffffff" stroke="#d8dee8"/>
+  <path d="M19 22h17c6 0 9 2 9 6 0 4-3 6-9 6H19V22Zm0 18h19c6 0 9 2 9 6s-3 7-10 7H19V40Z" fill="#24528f"/>
+  <path d="M46 17 59 25 46 33Z" fill="#ef593f"/>
+  <path d="M46 33 59 41 46 49Z" fill="#f3b51b"/>
+  <text x="27" y="37" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="800" fill="#ffffff">BSE</text>
+</svg>

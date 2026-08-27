@@ -1,0 +1,368 @@
+{
+  "version": "3",
+  "policy": "Project Laddu governed default transport plan for NSE-owned HTTPS reports. The installer merges these defaults into preserved operator configuration without replacing operator enablement or custom URLs. Every payload remains fail-closed on host, size, schema, trade-date lineage and content hash. Inbox transport remains available as a secondary recovery path. Index membership is sourced only from official constituent-list artifacts; ind_close_all is not a membership feed.",
+  "artifacts": [
+    {
+      "artifact_key": "cm_udiff_bhavcopy",
+      "source_key": "cm_udiff_bhavcopy",
+      "enabled": true,
+      "required": true,
+      "lookback_days": 7,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_{yyyymmdd}_F_0000.csv.zip",
+        "https://archives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_{yyyymmdd}_F_0000.csv.zip"
+      ],
+      "inbox_glob": "cm_udiff_bhavcopy/*{yyyymmdd}*"
+    },
+    {
+      "artifact_key": "security_delivery_positions",
+      "source_key": "security_delivery_positions",
+      "enabled": true,
+      "required": true,
+      "lookback_days": 7,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_{ddmmyyyy}.csv",
+        "https://archives.nseindia.com/products/content/sec_bhavdata_full_{ddmmyyyy}.csv"
+      ],
+      "inbox_glob": "security_delivery_positions/*{ddmmyyyy}*"
+    },
+    {
+      "artifact_key": "mii_security_file",
+      "source_key": "mii_security_file",
+      "enabled": true,
+      "required": true,
+      "lookback_days": 7,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/cm/NSE_CM_security_{ddmmyyyy}.csv.gz",
+        "https://archives.nseindia.com/content/cm/NSE_CM_security_{ddmmyyyy}.csv.gz"
+      ],
+      "inbox_glob": "mii_security_file/*{ddmmyyyy}*"
+    },
+    {
+      "artifact_key": "daily_volatility",
+      "source_key": "daily_volatility_var_price_band",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 7,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/archives/nsccl/volt/CMVOLT_{ddmmyyyy}.CSV",
+        "https://archives.nseindia.com/archives/nsccl/volt/CMVOLT_{ddmmyyyy}.CSV"
+      ],
+      "inbox_glob": "daily_volatility_var_price_band/*CMVOLT*{ddmmyyyy}*"
+    },
+    {
+      "artifact_key": "price_bands",
+      "source_key": "daily_volatility_var_price_band",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 7,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/cm/sec_list_{ddmmyyyy}.csv",
+        "https://archives.nseindia.com/content/cm/sec_list_{ddmmyyyy}.csv"
+      ],
+      "inbox_glob": "daily_volatility_var_price_band/*sec_list*{ddmmyyyy}*"
+    },
+    {
+      "artifact_key": "index_constituents_nifty50",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY 50",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/indices/ind_nifty50list.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_nifty50/*"
+    },
+    {
+      "artifact_key": "index_constituents_niftynext50",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY NEXT 50",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/indices/ind_niftynext50list.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_niftynext50/*"
+    },
+    {
+      "artifact_key": "index_constituents_nifty100",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY 100",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/indices/ind_nifty100list.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_nifty100/*"
+    },
+    {
+      "artifact_key": "index_constituents_nifty200",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY 200",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/indices/ind_nifty200list.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_nifty200/*"
+    },
+    {
+      "artifact_key": "index_constituents_nifty500",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY 500",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_nifty500/*"
+    },
+    {
+      "artifact_key": "index_constituents_midcap100",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY MIDCAP 100",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftymidcap100list.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_midcap100/*"
+    },
+    {
+      "artifact_key": "index_constituents_smallcap100",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY SMALLCAP 100",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftysmallcap100list.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_smallcap100/*"
+    },
+    {
+      "artifact_key": "index_constituents_bank",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY BANK",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftybanklist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_bank/*"
+    },
+    {
+      "artifact_key": "index_constituents_it",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY IT",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftyitlist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_it/*"
+    },
+    {
+      "artifact_key": "index_constituents_auto",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY AUTO",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftyautolist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_auto/*"
+    },
+    {
+      "artifact_key": "index_constituents_fmcg",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY FMCG",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftyfmcglist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_fmcg/*"
+    },
+    {
+      "artifact_key": "index_constituents_pharma",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY PHARMA",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftypharmalist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_pharma/*"
+    },
+    {
+      "artifact_key": "index_constituents_metal",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY METAL",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftymetallist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_metal/*"
+    },
+    {
+      "artifact_key": "index_constituents_realty",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY REALTY",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftyrealtylist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_realty/*"
+    },
+    {
+      "artifact_key": "index_constituents_energy",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY ENERGY",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftyenergylist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_energy/*"
+    },
+    {
+      "artifact_key": "bulk_deals",
+      "source_key": "bulk_block_short_margin",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 1,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/equities/bulk.csv",
+        "https://archives.nseindia.com/content/equities/bulk.csv"
+      ],
+      "inbox_glob": "bulk_block_short_margin/bulk*"
+    },
+    {
+      "artifact_key": "block_deals",
+      "source_key": "bulk_block_short_margin",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 1,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/equities/block.csv",
+        "https://archives.nseindia.com/content/equities/block.csv"
+      ],
+      "inbox_glob": "bulk_block_short_margin/block*"
+    },
+    {
+      "artifact_key": "short_selling",
+      "source_key": "bulk_block_short_margin",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 7,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/equities/shortselling_{ddmmyyyy}.csv",
+        "https://archives.nseindia.com/content/equities/shortselling_{ddmmyyyy}.csv"
+      ],
+      "inbox_glob": "bulk_block_short_margin/short*{ddmmyyyy}*"
+    },
+    {
+      "artifact_key": "surveillance_52_week",
+      "source_key": "surveillance_52w_price_band_changes",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 7,
+      "url_templates": [
+        "https://nsearchives.nseindia.com/content/cm/CM_52_wk_High_low_{ddmmyyyy}.csv",
+        "https://archives.nseindia.com/content/cm/CM_52_wk_High_low_{ddmmyyyy}.csv"
+      ],
+      "inbox_glob": "surveillance_52w_price_band_changes/*52*w*{ddmmyyyy}*"
+    },
+    {
+      "artifact_key": "corporate_actions",
+      "source_key": "corporate_actions",
+      "enabled": true,
+      "required": false,
+      "inbox_glob": "corporate_actions/*"
+    },
+    {
+      "artifact_key": "filings_results_announcements_shareholding",
+      "source_key": "filings_results_announcements_shareholding",
+      "enabled": true,
+      "required": false,
+      "inbox_glob": "filings_results_announcements_shareholding/*"
+    },
+    {
+      "artifact_key": "index_constituents_psubank",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY PSU BANK",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftypsubanklist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_psubank/*"
+    },
+    {
+      "artifact_key": "index_constituents_privatebank",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY PRIVATE BANK",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_nifty_privatebanklist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_privatebank/*"
+    },
+    {
+      "artifact_key": "index_constituents_healthcare",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY HEALTHCARE",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftyhealthcarelist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_healthcare/*"
+    },
+    {
+      "artifact_key": "index_constituents_media",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY MEDIA",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftymedialist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_media/*"
+    },
+    {
+      "artifact_key": "index_constituents_consumer_durables",
+      "source_key": "index_constituents",
+      "index_name": "NIFTY CONSUMER DURABLES",
+      "enabled": true,
+      "required": false,
+      "lookback_days": 0,
+      "url_templates": [
+        "https://www.niftyindices.com/IndexConstituent/ind_niftyconsumerdurableslist.csv"
+      ],
+      "inbox_glob": "index_constituents/index_constituents_consumer_durables/*"
+    }
+  ]
+}

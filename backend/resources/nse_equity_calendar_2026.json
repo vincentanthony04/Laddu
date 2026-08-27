@@ -1,0 +1,100 @@
+{
+  "authority": "TradingSessionAuthority",
+  "authority_version": "1.1.0-cas-phase1",
+  "exchange": "NSE",
+  "segment": "CAPITAL_MARKET_EQUITIES",
+  "timezone": "Asia/Kolkata",
+  "coverage_start": "2026-01-01",
+  "coverage_end": "2026-12-31",
+  "regular_session": {
+    "open": "09:15",
+    "close": "15:30"
+  },
+  "holidays": [
+    "2026-01-15",
+    "2026-01-26",
+    "2026-03-03",
+    "2026-03-26",
+    "2026-03-31",
+    "2026-04-03",
+    "2026-04-14",
+    "2026-05-01",
+    "2026-05-28",
+    "2026-06-26",
+    "2026-09-14",
+    "2026-10-02",
+    "2026-10-20",
+    "2026-11-10",
+    "2026-11-24",
+    "2026-12-25"
+  ],
+  "special_sessions": {
+    "2026-02-01": {
+      "open": "09:15",
+      "close": "15:30",
+      "reason": "Union Budget live trading session"
+    }
+  },
+  "non_regular_notices": {
+    "2026-11-08": {
+      "state": "HOLIDAY_WITH_MUHURAT_SESSION",
+      "timings_status": "NOT_ENCODED"
+    }
+  },
+  "source_evidence": [
+    {
+      "type": "NSE_CIRCULAR",
+      "ref": "NSE/CMTR/71775",
+      "date": "2025-12-12"
+    },
+    {
+      "type": "NSE_CIRCULAR",
+      "ref": "NSE/CMTR/72260",
+      "date": "2026-01-12"
+    },
+    {
+      "type": "NSE_CIRCULAR",
+      "ref": "NSE/CMTR/72349",
+      "date": "2026-01-16"
+    },
+    {
+      "type": "NSE_CIRCULAR",
+      "ref": "NSE/CMTR/74466",
+      "date": "2026-05-29",
+      "subject": "Closing Auction Session trading modalities"
+    }
+  ],
+  "closing_auction_session": {
+    "effective_from": "2026-08-03",
+    "phase": "PHASE_1",
+    "eligibility": "CASH_STOCK_WITH_DERIVATIVE_CONTRACT",
+    "continuous_close_for_cas": "15:15",
+    "reference_transition": {
+      "start": "15:15",
+      "end": "15:20"
+    },
+    "order_entry": {
+      "start": "15:20",
+      "end": "15:30",
+      "random_close_last_minutes": 2
+    },
+    "matching": {
+      "start": "15:30",
+      "end": "15:35"
+    },
+    "transition_to_post_close": {
+      "start": "15:35",
+      "end": "15:50"
+    },
+    "post_close": {
+      "start": "15:50",
+      "end": "16:00"
+    },
+    "reference_price_vwap_window": {
+      "start": "15:00",
+      "end": "15:15"
+    },
+    "non_cas_continuous_close": "15:30",
+    "source_ref": "NSE/CMTR/74466"
+  }
+}

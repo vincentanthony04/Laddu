@@ -1,0 +1,172 @@
+{
+  "acceptance_requirements": {
+    "pl17_clean_usability_install_acceptance": "REQUIRED ON EXACT INSTALLED PL17: installation must commit only after package/data/retention/backend/frontend served-byte/operational proof; Microsoft Edge or full browser automation is post-install evidence and must not roll back a correctly installed payload. Retain the reviewed usability closure for scanner recovery, bounded recent-candle analysis, exact-build readiness evidence, truthful Actionable rows, same-decision lifecycle tracking and mixed-schema Research history. Full customer browser and naturally occurring Actionable → Model Paper → settlement → After → restart proof remain mandatory before product acceptance. Protected trading mathematics and R:R thresholds remain byte-frozen from PL12; broker authority NONE.",
+    "pl18_evidence_pipeline_acceptance": "REQUIRED ON EXACT INSTALLED PL18: historical PIT must complete or expose an explicit stage blocker; historical capital-profile WFA must persist into the live validation authority before scratch cleanup; calibrated challenger GET must remain bounded; WFA evidence-not-ready must be structured rather than opaque 503; no WFA threshold, trading threshold, production ML weight or broker authority may be weakened.",
+    "pl23_scanner_truth_restoration_acceptance": "REQUIRED ON EXACT INSTALLED PL23: whole-universe scanner status must use Intraday/Delivery coverage authorities; current new-sweep counters must not erase retained last-completed full-sweep proof; live Intraday analysis and Delivery deep analysis remain separate; PL22 scanner engine bytes, evidence transport, trading/R:R/cost/risk/Model Paper authorities remain unchanged; broker authority NONE.",
+    "pl24_capital_wfa_governance_acceptance": "REQUIRED ON EXACT INSTALLED PL24: scanner runtime and trading mathematics remain frozen; historical research-profile and capital-profile WFA evidence publish immutably to governance PostgreSQL; prospective selector evidence remains a separate authority and is never backfilled from historical research; research catalogue readiness may be proven from the persisted market-lake authority; production ML influence remains zero until forward qualification; broker authority NONE.",
+    "pl25_persisted_catalogue_wfa_activation_acceptance": "REQUIRED ON EXACT INSTALLED PL25: direct read-only DuckDB proof must show a non-empty research_delivery_training_panel with sufficient date depth before persisted-catalogue activation; only a missing historical capital WFA may skip the redundant refresh phase; forward selector evidence remains prospective-only; scanner/trading mathematics frozen; broker authority NONE.",
+    "pl30_trade_ready_selector_hash_acceptance": "REQUIRED ON EXACT INSTALLED PL30: canonical Final/Trade Ready decisions are the first major Workspace decision surface and expose action, LTP, Entry/T1/SL, R:R, quantity, explicit risk, freshness, signal age, holding state and rank without synthesizing missing authority; Research remains visually and economically separate. Governed selector feature snapshots must hash JSON-safe material identical to PostgreSQL JSONB retention; legacy PL29 non-finite hash-only mismatches may be accepted only when all semantic snapshot and immutable member fields are otherwise identical; genuine content differences fail closed. Scanner/trading/R:R/WFA mathematics remain frozen; broker authority NONE.",
+    "pl33_official_pit_feature_wiring_acceptance": "REQUIRED ON EXACT INSTALLED PL33: Delivery and Intraday market context must consult the existing local/cache-first point-in-time NSE official evidence authority at the decision date. Canonical decisions may project only finite official delivery-percentage and delivered-quantity surprise values already returned by that authority, plus an already-computed verified fundamental score. Missing/partial evidence must remain missing; no zero/default substitution, no provider HTTP, no gate weakening, and no fabricated event or official data. PL32 sector-relative and PL31 quote-receipt lineage remain non-regressed; broker authority NONE.",
+    "pl34_event_risk_pit_capture_acceptance": "REQUIRED ON EXACT INSTALLED PL34: canonical decision-time event_risk mapping may project to Research event_risk_score only when its flag is an explicit boolean. True maps to 1.0, false maps to 0.0; absent/malformed authority stays missing; pre-existing scalar authority is preserved. PL33 official/fundamental, PL32 sector-relative, PL31 quote-lineage, selector weights, 60% completeness gate, trading/risk mathematics and broker authority remain unchanged.",
+    "pl35_installer_ephemeral_lock_acceptance": "REQUIRED ON EXACT INSTALLED PL35: installer preservation must exclude only transient *.lock files beneath data/runtime/locks from durable-state hashing. Adjacent runtime data, secure state and lock-named files outside that exact transient directory remain preserved and hashed. The exact prior PermissionError on data/runtime/locks/analytical-pipeline.lock must not recur. PL34 research/event-risk, PL33 official/fundamental, PL32 sector-relative, PL31 quote-lineage, trading/risk/WFA/ML math and broker authority remain unchanged.",
+    "pl37_configurable_rolling_ml_wfa_acceptance": "REQUIRED ON EXACT INSTALLED PL37: installer must commit; configured historical ML target/min/max must project consistently; with the current retained history the resolved standard window must be 500 trading dates; every OOF fold and final Delivery model must use the same rolling window; short forward-selector evidence remains maturity-only; prior PL35/PL36 installer retention protections remain effective; exact runtime/frontend identity and post-install product evidence are required. Broker authority remains NONE.",
+    "pl42_adaptive_history_corporate_action_acceptance": "REQUIRED ON EXACT INSTALLED PL42: install must commit; retained research scope must drive market-wide official NSE corporate-action range acquisition/reconciliation; adjusted catalogue must expose row-scoped coverage; Delivery historical training must use all eligible history before each fold with 500 only as a stability reference and no default maximum; per-stock minimum history, recency weighting and symbol balancing must be evidenced; Intraday must project its independent history policy; capital WFA may empirically PASS or FAIL without gate weakening; exact runtime/frontend/browser/operational proof remains required; broker authority NONE.",
+    "pl45_resumable_corporate_action_acceptance": "REQUIRED ON EXACT INSTALLED PL45: historical_pit_enrichment must acquire NSE corporate-action history with durable per-chunk resume; successful PUBLISHED/EMPTY_VALID chunks must survive later 401/403/429/timeout failures; retries must fetch only missing/retryable chunks; HTML/bot/malformed responses must never certify absence; only a complete market range may reconcile row-scoped PostgreSQL corporate_action_coverage; manual TCS/INFY bootstrap must be scoped and provenance-hashed; existing PL44 fold-local WFA/statistical/cost/risk gates remain unchanged; broker authority NONE.",
+    "pl46_defect_cluster_closure_acceptance": "REQUIRED ON EXACT INSTALLED PL46: a stale received_at from a prior pipeline hop must never survive a freshly classified quote's source_as_of, and INVALID_TIMESTAMP_ORDER must reflect a genuine ordering fault, not inherited lineage; an existing immutable population with incomplete three-arm predictions must attempt one bounded, same-identity repair before reporting THREE_ARM_CAPTURE_INCOMPLETE; the monitoring/recovery agent must not report HEALTHY while Research is semantically blocked even when all supervisor workers are live; a lifecycle status snapshot read at any point during Run End-to-End must reflect only the stage completed at that read, never a later stage's mutated content; any route-level 500/503 must surface a real file:line:function pointer in its logged evidence; corporate-action resumable acquisition (PL45) must still pass its dynamic two-run resume proof unmodified. PL44 fold-local capital WFA/training mathematics, all statistical/cost/risk thresholds, and PL45 resumable corporate-action acquisition remain unchanged; broker authority NONE.",
+    "r44_workspace_final_signal_acceptance": "REQUIRED ON EXACT INSTALLED R44: Final Signals is the first major Workspace surface; no Prepared/Research/Pending-geometry row is visible; All/Intraday/Delivery and Top 5/Top 10 controls work; stock rows are one line with Mode/Score/LTP/₹/%/Entry/Target/SL/Age/Hit/Next/Status/P&L; market context and scanner health are compact single-line support.",
+    "r45_research_learning_acceptance": "REQUIRED ON EXACT INSTALLED R45: historical PIT must record a successful/non-yielded catalogue+Delivery-trainer checkpoint after close; new PIT labels or snapshots must trigger single-spec dual-desk shadow evaluation without waiting for cadence; rejected/non-eligible shadow models remain unavailable; WFA requirements are not weakened; alpha and ML production influence remain fail-closed until governed evidence validates them.",
+    "r46_research_data_engine_acceptance": "REQUIRED ON EXACT INSTALLED R46: catalogue refresh materializes a non-empty historical Delivery research panel across retained dates; historical training reads that panel without giant separate Pandas merges; failures expose an explicit panel/model stage; WFA/ML/alpha remain fail-closed until governed qualification.",
+    "r47_intraday_price_action_acceptance": "REQUIRED ON EXACT INSTALLED R47 DURING MARKET HOURS: prove ORB5 is usable at 09:20 and not before; A+ only 14:15-14:30; no new Intraday entry from 14:30; mandatory flat by 15:00; native S/R role flips require accepted break/retest proof; operating session S/R reconciles ORB5/VWAP/EMA/volume price action; structural Stop/Target geometry fails closed; official NSE evidence changes confidence/risk only; market-map/collapsible UI works; R46 research/WFA/ML authority remains frozen with no unqualified production influence.",
+    "r48_ui_containment_evidence_acceptance": "REQUIRED ON EXACT INSTALLED R48: Progress & Proof must show Active Problems separately from Evidence Still Maturing; long payloads must remain bounded/readable with full-copy evidence; collapsing evidence must remove height; leaving Stock Intelligence must not leave black/oversized chart compositor surfaces on other pages; returning must rebuild the chart without stale-symbol leakage; browser assets must load with the R48 cache identity; R47 mathematics and R46 research/WFA/ML authority must remain non-regressed.",
+    "r49_final_product_read_model_acceptance": "REQUIRED ON EXACT INSTALLED R49: persisted Final Model Paper positions and persisted Research publication history remain independently visible; older settled rows are not hidden by current trading date; auxiliary performance/quant/diagnostic failures degrade PARTIAL without erasing canonical rows; browser retains last verified rows through transient read misses; All history/Open/Today views work; inactive Stock Intelligence leaves no residual black/GPU canvas surface; R47 mathematics and R46 research/WFA/ML authority remain frozen.",
+    "r50_canonical_final_signal_authority_acceptance": "REQUIRED ON EXACT INSTALLED R50: Final Signals must be sourced only from canonical active decisions; exact decision/signal lineage must reconcile with Model Paper positions; no selected-signal/scanner/research row may appear as a clean Final row; quote refresh may change LTP/change only; Signal Age, Holding Period and Position Age are independent; generic holding defaults are suppressed; target/stop crossings cannot remain clean ACTIVE/HOLD while lifecycle reconciliation lags; interactive reads and Index Levels must show bounded useful progress; R47 market-hours mathematics remains non-regressed.",
+    "r5_persistent_research_healthy_cadence_acceptance": "REQUIRED ON EXACT INSTALLED R5: once a candidate is customer-published to Research it remains findable with stable identity and first-seen time after scanner rerank; reranked rows move to History/Monitor rather than disappearing; Research Target/SL outcomes and Research accuracy/performance remain separate from Final/Model Paper realised P&L; normal EXPECTED_IDLE scanner cadence renders SLEEPING with last/next timestamps/countdown and does not itself reduce trust; genuine stale/failed scanner, database pressure or customer-read latency still degrades/fails trust.",
+    "r6_research_freshness_revalidation_acceptance": "REQUIRED ON EXACT INSTALLED R6: verified provider quote timestamp/freshness used by the scanner must survive the Research capture boundary into the immutable point-in-time feature snapshot; receipt time must never substitute for missing provider time; stale/unverified quotes remain fail-closed; the 60% training feature floor is unchanged; a source-fixed Research/LightGBM worker must receive one governed runtime-source revalidation after upgrade even when label/snapshot counts are unchanged; unchanged runtime plus unchanged evidence remains cadence-suppressed; R5 persistent Research history/performance and healthy scanner sleeping semantics remain non-regressed; exact installed market-hours proof is still required.",
+    "r7_polished_full_product_merge_acceptance": "REQUIRED ON EXACT INSTALLED R7: full v131/R6 navigation/runtime remains on port 8086; graph-first cockpit uses canonical Final/Model Paper performance; Research history/performance stays separate; Stock Intelligence, Model Paper, Accuracy, Research and Diagnostics remain reachable; 8787 standalone shell is not the installed product; R5/R6 remain non-regressed; broker authority NONE.",
+    "r8_production_usability_closure_acceptance": "REQUIRED ON EXACT INSTALLED R8: one v131 application on 8086 exposes complete Actionable and durable Research rows, separate Research/Final/Model Paper performance, coherent healthy scanner sleep, all ten Stock Intelligence timeframes, exact R8 cache/build identity, all customer destinations, clean browser console, direct decision/Research routes, Research refresh/restart persistence and one evidence ZIP. Protected trading mathematics is byte-frozen; broker authority NONE; NOT ACCEPTED / NOT RELEASE until installed proof passes.",
+    "simple_actionable_ui_r1_acceptance": "REQUIRED ON EXACT INSTALLED SIMPLE ACTIONABLE UI R1: Actionable Now is sourced only from canonical Final decisions; Watch Next remains separate research evidence; Result is immutable and After is separate; live trust/freshness fails closed; custom internal chart is disabled from decision authority; broker chart is external; Model Paper/lifecycle/settlement/accuracy share exact decision lineage; mathematics-green deterministic authorities remain non-regressed.",
+    "terminal_actionable_ui_r2_acceptance": "REQUIRED ON EXACT INSTALLED TERMINAL ACTIONABLE UI R2: the first customer viewport at 1366x768 must show compact trust/market tape plus up to five canonical actionable rows without a marketing hero/KPI wall; Actionable Now must use canonical Final decisions only; Watch Next must remain research-only; Entry/Target/SL/R:R/status must not be browser-derived; Result and After must remain separate; stock rows must be keyboard/click accessible to canonical Stock Intelligence; stale/not-actionable truth must fail closed; internal chart remains disabled and broker chart external; Diagnostics remains secondary; light/dark layouts must retain compact semantic hierarchy; mathematics-green deterministic authorities must remain non-regressed.",
+    "terminal_actionable_ui_r3_e2e_acceptance": "REQUIRED ON EXACT INSTALLED R3: frontend identity/build marker and served asset hashes bind to the installed package; browser trust matches the newest runtime trust revision; stale workspace/frontend identity failure suppresses new actionable decisions; partial scanner coverage is provisional and incomplete/unknown evidence cannot display a normal score; market-closed research cannot display LIVE VALIDATION; one persistent exact decision_id must progress through ACTIONABLE_OBSERVED -> MODEL_OPEN_OBSERVED -> SETTLED_OBSERVED -> AFTER_OBSERVED -> RESTART_VERIFIED; frozen Entry/Target/SL geometry cannot drift; Result is immutable and After uses exact intraday/delivery post-exit horizons; restart proof requires a different process_boot_id after Restart-Service ProjectLaddu and the same settlement/After evidence after restart; only FULL_EXACT_CUSTOMER_VERTICAL_PASSED is final live product acceptance. Candidate remains NOT ACCEPTED / NOT RELEASE until that evidence exists."
+  },
+  "acceptance_state": "TERMINAL_ACTIONABLE_UI_R3_E2E_ACCEPTANCE_R5_PERSISTENT_RESEARCH_HEALTHY_CADENCE_R6_RESEARCH_FRESHNESS_REVALIDATION_R7_POLISHED_FULL_PRODUCT_MERGE_R8_PRODUCTION_USABILITY_CLOSURE_PL17_CLEAN_USABILITY_INSTALL_CLOSURE_PL20_EVIDENCE_PIPELINE_CLOSURE_PL21_EVIDENCE_ORCHESTRATION_CLOSURE_PL22_EVIDENCE_TRANSPORT_CLOSURE_INSTALLATION_CANDIDATE_NOT_ACCEPTED_NOT_RELEASE_PL23_SCANNER_TRUTH_RESTORATION_PL24_CAPITAL_WFA_GOVERNANCE_CLOSURE_PL25_PERSISTED_CATALOGUE_WFA_ACTIVATION_PL26_QUANT_GOVERNANCE_CLOSURE_PL27_TRAINING_SCHEMA_CLOSURE_PL28_FINITE_TARGET_TRAINING_CLOSURE_PL29_PUBLICATION_AUTHORITY_CONTRACT_CLOSURE_PL30_TRADE_READY_SELECTOR_HASH_CLOSURE_PL31_RESEARCH_LINEAGE_CAPTURE_CLOSURE_PL32_SECTOR_RELATIVE_PIT_CLOSURE_PL33_OFFICIAL_PIT_FEATURE_WIRING_CLOSURE_PL34_EVENT_RISK_PIT_CAPTURE_CLOSURE_PL35_INSTALLER_EPHEMERAL_LOCK_CLOSURE_PL36_END_TO_END_BLOCKER_CLOSURE_PL37_CONFIGURABLE_ROLLING_ML_WFA_CLOSURE_PL38_FORWARD_EVIDENCE_ELIGIBILITY_CLOSURE_PL39_HISTORICAL_SESSION_LINEAGE_CLOSURE_PL40_SURVIVORSHIP_PIT_MEMBERSHIP_CLOSURE_PL41_OFFICIAL_SOURCE_QUALIFICATION_POLICY_PL42_ADAPTIVE_HISTORY_CORPORATE_ACTION_CLOSURE_PL43_ONE_CLICK_E2E_AGENTS_CLOSURE_PL44_FOLD_LOCAL_CAPITAL_WFA_CLOSURE_PL45_RESUMABLE_CORPORATE_ACTION_CLOSURE_PL46_DEFECT_CLUSTER_CLOSURE",
+  "artifact_type": "INSTALLATION_CANDIDATE",
+  "attestation_version": "project-laddu-certification-boundary-8.0.0-production-usability-closure",
+  "broker_authority": "NONE",
+  "build_focus": "PL46_SIMPLE_INSTALL_QUESTDB_SINGLE_OWNER_AND_CLOSED_MARKET_LINEAGE_R6",
+  "candidate_revision": "pl46-simple-install-r6-questdb-single-owner-closed-market-lineage-ui7",
+  "certification": {
+    "END_TO_END_ACCEPTED": "PENDING_ACCEPTANCE_GATE",
+    "INSTALLABLE": "PENDING_INSTALLED_PROOF",
+    "SOURCE_SEALED": "PASS",
+    "current_level": "SOURCE_SEALED"
+  },
+  "closure_states": {
+    "pl33_official_pit_feature_wiring": "SOURCE_QC_PENDING_EXACT_INSTALLED_RESEARCH_CAPTURE_ACCEPTANCE; existing retained official NSE/fundamental authorities wired into canonical Research capture without synthetic defaults.",
+    "pl46_defect_cluster_closure": "SOURCE_QC_REBUILT; six focused PL46 regressions required; exact Windows install/runtime/browser/market proof remains pending."
+  },
+  "derived_from_exact_candidate": {
+    "artifact": "PL12.zip",
+    "contract": "Last accepted installed baseline. PL17 reapplies only the reviewed usability delta plus the corrected installer commit contract; rejected PL14/PL15/PL16 installer candidates are not lineage parents.",
+    "sha256": "fad337d4c92486810465fb82fd9a794687b9d13111789b1ff9831c60a9a3fff1"
+  },
+  "evidence_boundaries": {
+    "pl36_end_to_end_blocker_closure": "SOURCE_QC_PENDING_EXACT_WINDOWS_END_TO_END_ACCEPTANCE; canonical/raw authority retention remains fail-closed, derived feature/prediction parquet may refresh, stale priority exhaustion self-reconciles once, historical Delivery ML starts from exactly 500 effective train dates, short forward selector evidence is maturity-only, and incomplete critical NSE evidence retries quickly.",
+    "pl38_forward_evidence_eligibility_closure": "SOURCE_QC_PENDING_EXACT_WINDOWS_ACCEPTANCE; only genuine three-arm prospective cohorts count toward Level-5, historical/migrated invalid rows are retained and explicitly excluded.",
+    "pl46_defect_cluster_closure": "SOURCE_ONLY: six deterministic PL46 focused regressions plus package/identity sealing; exact installed Windows, real provider, PostgreSQL reconciliation, browser, capital-WFA and market-hours evidence remain required."
+  },
+  "generated_utc": "2026-08-23T06:15:00Z",
+  "historical_defect_contract": {
+    "formally_closed_at_source_freeze": 0,
+    "installed_proof_plan_content_sha256": "f4df68447243ce544cd6e25323bfcaabbf2dc3c9e2177f3327ac8ae3a667680c",
+    "installed_proof_plan_gate_count": 43,
+    "installed_proof_runner_sha256": "4597b857f3568703d5279d667915103ccb3b06cbf3d40f402fb2a5fc6b924a93",
+    "policy": "Historical source remediation remains reconciled; installed defect closure is accepted only through exact R31 target evidence and cannot be inferred from source packaging.",
+    "source_reconciled": 37,
+    "source_reconciliation_content_sha256": "c1ea739455de93aba83448e5cbeec2bd084048bfd31c937f1edfbae9a04e5403"
+  },
+  "installable": true,
+  "installation_purpose": "EXACT_WINDOWS_TARGET_PROOF",
+  "parent": {
+    "archive": "Project-Laddu-v128.0.0-TRUST-LIFECYCLE-FULL-UNIVERSE-INSTALLATION-CANDIDATE-NOT-RELEASE.zip",
+    "archive_sha256": "7dd1195226e09f5354e3f20869c01f4ba13bdc0804375538fe0f17e202ff22cd",
+    "release_identity_sha256": "252fd709c169c6acee818d7e146be276d936c3b81369012d9be7bf06668795c2",
+    "release_name": "Product Recovery R4",
+    "state": "SOURCE_SEALED_INSTALLED_PRODUCT_PARENT",
+    "version": "v128.0.0"
+  },
+  "pl17_version_control_parent": {
+    "artifact": "PL12.zip",
+    "sha256": "fad337d4c92486810465fb82fd9a794687b9d13111789b1ff9831c60a9a3fff1",
+    "state": "ACCEPTED_INSTALLED_BASELINE"
+  },
+  "pl22_evidence_transport_closure": {
+    "broker_authority": "NONE",
+    "catalogue_arbitration": "historical PIT waits up to 900 seconds behind a genuine peer research-catalog owner instead of failing after 1 second",
+    "legacy_outbox_replay": "existing durable outbox bundles containing non-finite Python JSON tokens are normalized before governed replay",
+    "strict_json_publication": "NaN/Infinity are converted to JSON null at trainer, publication service and PostgreSQL governance boundary",
+    "trading_authority": "UNCHANGED"
+  },
+  "pl25_persisted_catalogue_wfa_activation": {
+    "broker_authority": "NONE",
+    "build_marker": "production-usability-r8-pl25-catalogue-wfa-8086",
+    "forward_selector_backfill": "FORBIDDEN",
+    "scanner_trading_core": "FROZEN",
+    "scope": "read-only persisted DuckDB panel proof + missing-capital-WFA activation only",
+    "state": "SOURCE_PROVEN_INSTALLATION_CANDIDATE_NOT_ACCEPTED_NOT_RELEASE"
+  },
+  "pl42_change_boundary": "adaptive ML/WFA history policy; corporate-action source/factor/coverage authority; research catalogue/trainer/supervisor/status wiring; release identity/package metadata only",
+  "pl42_exact_parent_artifact": "PL41.zip",
+  "pl42_exact_parent_sha256": "cbcb593bd6ad5966ead5ee01e45fb71baad5329e75b83257e36da9e56498566c",
+  "pl45_change_boundary": "resumable NSE corporate-action chunk acquisition; manual scoped bootstrap provenance; historical PIT supervisor progress visibility; exact build identity/package metadata only; PL44 WFA/trainer mathematics frozen",
+  "pl45_exact_parent_artifact": "PL44.zip",
+  "pl45_exact_parent_sha256": "91e7b3162d635891b794c15c977be41adb13de71d495a0c047e7e8e535e6fa61",
+  "pl46_change_boundary": "PIT receipt lineage, completed-session closed-market receipt provenance, QuestDB retained-volume single-owner recovery, three-arm repair, monitoring semantics, lifecycle snapshot immutability, diagnosability, runtime retry and research terminality; no trading/WFA/ML/statistical/cost/risk threshold changes.",
+  "pl46_exact_parent_artifact": "PL45.zip",
+  "pl46_exact_parent_sha256": "81e109968fe56df5ec4a0cc59272713daf25dc2019a927c876c043db8bd65ef5",
+  "policy": "PL46 Source Seal R2 is an INSTALLATION_CANDIDATE only. Source QC may pass, but exact Windows installation/runtime/browser/market evidence is still required before acceptance. Broker authority remains NONE; production_ready remains false.",
+  "product": "Project Laddu",
+  "production_ready": false,
+  "proof_state": "SOURCE_QC_REBUILT_PENDING_EXACT_WINDOWS_INSTALL",
+  "questdb_recovery_r3_change_boundary": {
+    "allowed_changes": [
+      "installer/questdb_recovery.py",
+      "installer/data_plane.ps1",
+      "validation/verify_pl46_questdb_recovery_retry_closure.py",
+      "validation/validate_deployable_candidate.py",
+      "frontend/* presentation identity/assets",
+      "release/package metadata",
+      "backend/config.py version string"
+    ],
+    "protected_unchanged": [
+      "trading mathematics",
+      "scanner decision mathematics",
+      "WFA thresholds",
+      "statistical gates",
+      "transaction-cost authority",
+      "risk authority",
+      "PIT model semantics",
+      "broker authority NONE"
+    ]
+  },
+  "release_line": "product-recovery-r8-launch-sprint",
+  "release_name": "PL46 Simple Install R6 + Closed-Market Lineage + UI7",
+  "required_acceptance": {
+    "pl30_trade_ready_selector_hash_acceptance": "REQUIRED ON EXACT INSTALLED PL30: canonical Final/Trade Ready decisions are the first major Workspace decision surface and expose action, LTP, Entry/T1/SL, R:R, quantity, explicit risk, freshness, signal age, holding state and rank without synthesizing missing authority; Research remains visually and economically separate. Governed selector feature snapshots must hash JSON-safe material identical to PostgreSQL JSONB retention; legacy PL29 non-finite hash-only mismatches may be accepted only when all semantic snapshot and immutable member fields are otherwise identical; genuine content differences fail closed. Scanner/trading/R:R/WFA mathematics remain frozen; broker authority NONE.",
+    "pl31_research_lineage_capture_acceptance": "REQUIRED ON EXACT INSTALLED PL31: research capture must bind source_as_of to the receipt timestamp of the exact quote used by the scanner; stale generic decision receipt clocks must not create false INVALID_TIMESTAMP_ORDER evidence. Genuine source-after-receipt inversion remains fail-closed. Feature completeness/freshness thresholds are unchanged. Diagnostics must expose source_as_of, received_at and coverage. PL30 trading/risk/WFA/ML authority and broker authority NONE remain unchanged.",
+    "pl32_sector_relative_pit_acceptance": "REQUIRED ON EXACT INSTALLED PL32: when canonical scanner evidence contains both stock change_pct and mapped sector_change_pct at the decision timestamp, capture their signed difference as sector_relative_return with explicit PIT provenance. Unavailable/unmapped sector context must remain missing. Existing selector feature weights and the 60% completeness gate remain unchanged; no delivery, fundamental, event, or sector data may be fabricated. PL31 quote receipt lineage and PL30 trading/model authorities remain non-regressed; broker authority NONE.",
+    "pl35_installer_ephemeral_lock_acceptance": "REQUIRED ON EXACT INSTALLED PL35: installer preservation must exclude only transient *.lock files beneath data/runtime/locks from durable-state hashing. Adjacent runtime data, secure state and lock-named files outside that exact transient directory remain preserved and hashed. The exact prior PermissionError on data/runtime/locks/analytical-pipeline.lock must not recur. PL34 research/event-risk, PL33 official/fundamental, PL32 sector-relative, PL31 quote-lineage, trading/risk/WFA/ML math and broker authority remain unchanged.",
+    "pl36_end_to_end_blocker_closure_acceptance": "REQUIRED ON EXACT INSTALLED PL36: install must commit without false retention regression when derived feature/prediction Parquet refreshes; canonical/raw Parquet and PostgreSQL/QuestDB authorities remain preserved; exhausted stale priority jobs self-reconcile without infinite loops; retained historical PIT training uses exactly 500 effective train dates before the first purged OOF test; short prospective selector evidence is forward-maturity-only and cannot block historical ML/WFA; incomplete critical NSE official evidence retries on a bounded fast cadence; exact runtime/frontend identity and post-install product acceptance must be collected before acceptance. Broker authority remains NONE.",
+    "pl37_configurable_rolling_ml_wfa_acceptance": "REQUIRED ON EXACT INSTALLED PL37: installer must commit; configured historical ML target/min/max must project consistently; with the current retained history the resolved standard window must be 500 trading dates; every OOF fold and final Delivery model must use the same rolling window; short forward-selector evidence remains maturity-only; prior PL35/PL36 installer retention protections remain effective; exact runtime/frontend identity and post-install product evidence are required. Broker authority remains NONE.",
+    "pl38_forward_evidence_eligibility_acceptance": "REQUIRED ON EXACT INSTALLED PL38: invalid legacy/migrated forward rows remain retained but must be excluded from Level-5 maturity statistics; only same-population exact three-arm candidates with valid observed<=prediction<settlement chronology count; eligible/excluded counts and reasons must be visible; PL37 rolling ML/WFA policy remains unchanged; broker authority NONE.",
+    "pl46_defect_cluster_closure_acceptance": "REQUIRED ON EXACT INSTALLED PL46: a stale received_at from a prior pipeline hop must never survive a freshly classified quote's source_as_of, and INVALID_TIMESTAMP_ORDER must reflect a genuine ordering fault, not inherited lineage; an existing immutable population with incomplete three-arm predictions must attempt one bounded, same-identity repair before reporting THREE_ARM_CAPTURE_INCOMPLETE; the monitoring/recovery agent must not report HEALTHY while Research is semantically blocked even when all supervisor workers are live; a lifecycle status snapshot read at any point during Run End-to-End must reflect only the stage completed at that read, never a later stage's mutated content; any route-level 500/503 must surface a real file:line:function pointer in its logged evidence; corporate-action resumable acquisition (PL45) must still pass its dynamic two-run resume proof unmodified. PL44 fold-local capital WFA/training mathematics, all statistical/cost/risk thresholds, and PL45 resumable corporate-action acquisition remain unchanged; broker authority NONE."
+  },
+  "source_attestation_scope": "all deployable package files excluding RELEASE_ATTESTATION.json, validation/package_allowlist.json and validation/package_manifest.sha256",
+  "source_digest_algorithm": "SHA256(concat(each sorted source file: SHA256(bytes) + two spaces + relative POSIX path + newline)); inventory SHA256(sorted relative POSIX paths + newline)",
+  "source_file_count_excluding_generated_package_metadata": 1162,
+  "source_inventory_sha256": "9237574f5f74a901dfbb8e1aea352b3890b39b283be2f80d6fa0d9a00e2331ce",
+  "source_seal_parent": {
+    "artifact": "ProjectLaddu-v131.1.5-MICRO-AGILE-WFA-ML-TERMINALITY.zip",
+    "release_identity_sha256": "371c8c2e6aaa423eef03c0e950acc7b079249eba125553d01cd025b450fe5fc9",
+    "sha256": "d36da7961d61f95fe7b730f35ad1f3b86ee1b9c9e6556d225829ca83d2064f9c",
+    "state": "SOURCE_SEALED_PL46_R5_WINDOWS_INSTALL_REACHED_QUESTDB_SINGLE_OWNER_LOCK_BLOCKER",
+    "version": "v131.1.5"
+  },
+  "source_tree_sha256": "a2da5d880f4751fcbd1e4bc7ba012405244faf88046af3403111d8cb28103de2",
+  "summary": "v131.1.6 is a bounded field-evidence closure over v131.1.5: QuestDB retained-volume recovery enforces a single live Project-Laddu owner before recovery/promotion and fails fast on table-name-registry lock contention; closed-market completed-session quote consumption refreshes received_at for the current research capture while preserving historical source_as_of and the genuine INVALID_TIMESTAMP_ORDER guard. Runtime retry, WFA/ML subprocess terminality, UI7, protected trading/WFA/statistical/cost/risk mathematics and broker authority NONE remain unchanged.",
+  "ui_refinement": "PL46_QUESTDB_RECOVERY_R3_ON_UI7_ACTIONABLE_REDESIGN",
+  "version": "v131.1.6",
+  "simple_install_r6_change_boundary": {
+    "allowed_changes": [
+      "installer/questdb_recovery.py",
+      "backend/core/scan_orchestration_modes.py",
+      "validation/verify_pl46_questdb_recovery_retry_closure.py",
+      "validation/verify_pl46_closed_market_received_at_freshness.py",
+      "validation/validate_deployable_candidate.py",
+      "release/version/package metadata only"
+    ],
+    "questdb_policy": "exactly one live Project-Laddu owner may mount the retained QuestDB volume before recovery; unknown owners fail closed",
+    "closed_market_lineage_policy": "preserve historical source_as_of; refresh received_at at current completed-session quote consumption; genuine inversion remains rejected",
+    "protected_authorities": "trading/scanner ranking/WFA/ML/statistical/cost/risk mathematics unchanged; broker authority NONE",
+    "ui_branding": "existing Project Laddu chess icon/logo unchanged"
+  }
+}

@@ -1,0 +1,673 @@
+{
+  "schema_version": "historical-37-installed-proof-plan-1.0.0",
+  "authority": "Historical37InstalledProofPlan",
+  "authority_version": "1.0.0",
+  "project": "Project Laddu",
+  "tracked": 37,
+  "source_ledger": "validation/historical_37_defect_reconciliation.json",
+  "policy": {
+    "single_current_workflow": true,
+    "source_pass_never_closes_installed_defect": true,
+    "market_hours_gates_may_remain_target_pending_outside_market_hours": true,
+    "restart_gates_are_mandatory_for_mapped_defects": true,
+    "fault_injection_must_be_bounded_and_non_destructive": true,
+    "browser_evidence_must_be_exact_build": true,
+    "no_legacy_script_required_for_closure": true
+  },
+  "gate_catalog": {
+    "runtime_identity": {
+      "mode": "always",
+      "description": "Exact installed runtime version/ready state matches expected release"
+    },
+    "frontend_identity": {
+      "mode": "browser",
+      "description": "Exact installed four-asset frontend identity/hash has no mismatch"
+    },
+    "product_truth": {
+      "mode": "always",
+      "description": "Installed product acceptance is truthful; mandatory blockers prevent OPERATIONAL"
+    },
+    "data_plane_authority": {
+      "mode": "always",
+      "description": "Operational PG, governance PG, QuestDB and durable historical authority are ready"
+    },
+    "identity_search": {
+      "mode": "always",
+      "description": "Canonical NSE/BSE identity and POST /api/search exact-match contract pass"
+    },
+    "daily_history_freshness": {
+      "mode": "session",
+      "description": "Daily-history cold response is bounded, materialized local history converges to completed-session freshness, and the warm projection remains fast"
+    },
+    "intraday_history_freshness": {
+      "mode": "market_hours",
+      "description": "When market is open, intraday cold response is bounded, local materialization converges to freshness, and warm history remains fast"
+    },
+    "chart_api_dom_parity": {
+      "mode": "browser",
+      "description": "Rendered chart candle count/final timestamp exactly match canonical Chart API"
+    },
+    "mtf_visible_complete": {
+      "mode": "browser",
+      "description": "Required 30m/1H/4H/1D/1W/1M MTF frames are present and visibly rendered"
+    },
+    "sr_visible_semantics": {
+      "mode": "browser",
+      "description": "Nearest/major support-resistance projection is present and renders without semantic substitution"
+    },
+    "priority_pipeline_terminal": {
+      "mode": "always",
+      "description": "Priority pipeline reaches a terminal state and does not remain indefinitely partial"
+    },
+    "recovery_event_audit": {
+      "mode": "fault_injection",
+      "description": "Safe recovery creates an auditable recovery event/attempt record"
+    },
+    "market_context_alignment": {
+      "mode": "session",
+      "description": "Market/sector identity, price session and direction/breadth evidence are aligned"
+    },
+    "market_radar_latency": {
+      "mode": "always",
+      "description": "Market Radar is served from bounded local projection within its SLO"
+    },
+    "http_disconnect_resilience": {
+      "mode": "fault_injection",
+      "description": "Client disconnect does not create double-response/worker failure"
+    },
+    "postgres_transaction_resilience": {
+      "mode": "fault_injection",
+      "description": "Injected/transient PostgreSQL failure rolls back/fails closed and authority recovers"
+    },
+    "persistence_telemetry": {
+      "mode": "always",
+      "description": "System-health foreground read is bounded, background physical telemetry converges, and the completed health projection is fast/restart-safe"
+    },
+    "lake_reconciliation": {
+      "mode": "always",
+      "description": "Durable lake/Parquet reconciliation is complete before any destructive/prune step"
+    },
+    "operational_evidence_chain": {
+      "mode": "always",
+      "description": "Operational evidence hash chain has no source failures or chain errors"
+    },
+    "scanner_terminality": {
+      "mode": "always",
+      "description": "Scanner completes bounded generations with coherent population/stage accounting"
+    },
+    "canonical_surface_reconciliation": {
+      "mode": "always",
+      "description": "Canonical DecisionRecord reconciles Today Entries, Ledger and Model Paper without conflicts/orphans"
+    },
+    "signal_ledger_authority": {
+      "mode": "always",
+      "description": "Signal Ledger health derives from canonical accepted/settled decision authority"
+    },
+    "research_readiness_separation": {
+      "mode": "always",
+      "description": "Research runtime readiness is distinct from model/research evidence readiness"
+    },
+    "official_nse_source_coverage": {
+      "mode": "session",
+      "description": "Required official NSE source families are current/available or decision use fails closed"
+    },
+    "worker_progress_truth": {
+      "mode": "always",
+      "description": "RUNNING/healthy worker state requires useful-progress evidence or explicit expected-idle"
+    },
+    "network_revalidation_efficiency": {
+      "mode": "session",
+      "description": "Foreground historical projection does not wait for provider revalidation; repeated local reads remain bounded while repair/revalidation is independently scheduled"
+    },
+    "reference_job_nonzero": {
+      "mode": "session",
+      "description": "Reference-data job cannot report success with zero required rows"
+    },
+    "diagnostic_api_contract": {
+      "mode": "always",
+      "description": "Installed diagnostics use only registered HTTP methods/routes and return bounded responses"
+    },
+    "fresh_current_product_evidence": {
+      "mode": "browser",
+      "description": "Current exact-build browser/API proof covers Market/Sector, Stock Report, Chart, MTF, S/R and Research"
+    },
+    "operations_live_progress": {
+      "mode": "browser",
+      "description": "Operations UI exposes live useful-progress/state for active jobs"
+    },
+    "audited_safe_recovery_action": {
+      "mode": "fault_injection",
+      "description": "Manual recovery controls are safety-classed, bounded and persisted in audit trail"
+    },
+    "selected_stock_latency_completeness": {
+      "mode": "session",
+      "description": "Selected-stock cold responses are bounded, all sampled symbols converge from WARMING to READY, and completed snapshots meet warm-latency/completeness limits without bulk-work coupling"
+    },
+    "market_alias_direction_alignment": {
+      "mode": "browser",
+      "description": "Canonical market/sector names are used and stale direction cannot accompany newer price"
+    },
+    "operations_log_trail": {
+      "mode": "browser",
+      "description": "Operations UI/log projection has concrete sources and no object/undefined rendering"
+    },
+    "performance_geometry_lineage": {
+      "mode": "always",
+      "description": "Accuracy/performance uses geometry-complete canonical settlements and authoritative post-cost lineage"
+    },
+    "research_retention_restart": {
+      "mode": "restart",
+      "description": "Restart preserves Research evidence content hash/high-water counts without regression"
+    },
+    "selected_stock_orchestration_isolation": {
+      "mode": "fault_injection",
+      "description": "Selected-stock usefulness remains available when orchestration lease/controller is stale/unhealthy"
+    },
+    "scanner_no_retired_generations": {
+      "mode": "fault_injection",
+      "description": "Retired scanner generations cannot remain active/saturate bounded analysis workers"
+    },
+    "controller_watchdog": {
+      "mode": "fault_injection",
+      "description": "Wedged controller evaluation is fenced by bounded watchdog and caller remains responsive"
+    },
+    "operations_local_projection": {
+      "mode": "fault_injection",
+      "description": "Operations diagnostics remain bounded local projections when dependencies are unhealthy"
+    },
+    "settlement_single_authority": {
+      "mode": "always",
+      "description": "One canonical settlement authority owns outcome/cost/P&L; no duplicate execution path is active"
+    },
+    "restart_history_continuity": {
+      "mode": "restart",
+      "description": "Restart preserves/reuses stored historical rows and final timestamps"
+    },
+    "browser_stable_dom": {
+      "mode": "browser",
+      "description": "Core tables/report reuse stable DOM identity during in-place refresh"
+    }
+  },
+  "rows": [
+    {
+      "id": "DL-001",
+      "title": "Installed acceptance reports OPERATIONAL while core visible product is unusable",
+      "required_gates": [
+        "runtime_identity",
+        "frontend_identity",
+        "product_truth",
+        "fresh_current_product_evidence"
+      ],
+      "required_modes": [
+        "always",
+        "browser"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-002",
+      "title": "TCS completed-session daily history is stale",
+      "required_gates": [
+        "daily_history_freshness",
+        "persistence_telemetry",
+        "restart_history_continuity"
+      ],
+      "required_modes": [
+        "always",
+        "restart",
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-003",
+      "title": "TCS intraday history stops hours before market close",
+      "required_gates": [
+        "intraday_history_freshness",
+        "persistence_telemetry",
+        "restart_history_continuity"
+      ],
+      "required_modes": [
+        "always",
+        "market_hours",
+        "restart"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-004",
+      "title": "Chart UI shows data only to around 1 July despite backend having much newer rows",
+      "required_gates": [
+        "chart_api_dom_parity",
+        "daily_history_freshness",
+        "restart_history_continuity",
+        "browser_stable_dom"
+      ],
+      "required_modes": [
+        "browser",
+        "restart",
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-005",
+      "title": "MTF API contains frames but visible MTF remains blank or partial",
+      "required_gates": [
+        "mtf_visible_complete",
+        "fresh_current_product_evidence"
+      ],
+      "required_modes": [
+        "browser"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-006",
+      "title": "Support and resistance exist in historical payloads but do not reliably render",
+      "required_gates": [
+        "sr_visible_semantics",
+        "fresh_current_product_evidence"
+      ],
+      "required_modes": [
+        "browser"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-007",
+      "title": "Priority TCS pipeline is blocked after partial completion and does not recover",
+      "required_gates": [
+        "priority_pipeline_terminal",
+        "recovery_event_audit"
+      ],
+      "required_modes": [
+        "always",
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-008",
+      "title": "Recovery authority reports BLOCKED but records no recovery events",
+      "required_gates": [
+        "recovery_event_audit",
+        "audited_safe_recovery_action"
+      ],
+      "required_modes": [
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-009",
+      "title": "Market and sector index data is stale and unstable",
+      "required_gates": [
+        "market_context_alignment",
+        "market_alias_direction_alignment",
+        "fresh_current_product_evidence"
+      ],
+      "required_modes": [
+        "browser",
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-010",
+      "title": "Market radar route exceeds its stated service target",
+      "required_gates": [
+        "market_radar_latency"
+      ],
+      "required_modes": [
+        "always"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-011",
+      "title": "Repeated HTTP client disconnects during backend responses",
+      "required_gates": [
+        "http_disconnect_resilience"
+      ],
+      "required_modes": [
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-012",
+      "title": "PostgreSQL connections close unexpectedly during transactions",
+      "required_gates": [
+        "postgres_transaction_resilience",
+        "data_plane_authority"
+      ],
+      "required_modes": [
+        "always",
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-013",
+      "title": "Persistence telemetry is null despite active data activity",
+      "required_gates": [
+        "persistence_telemetry",
+        "restart_history_continuity"
+      ],
+      "required_modes": [
+        "always",
+        "restart"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-014",
+      "title": "Lake reconciliation is incomplete",
+      "required_gates": [
+        "lake_reconciliation",
+        "restart_history_continuity",
+        "postgres_transaction_resilience"
+      ],
+      "required_modes": [
+        "always",
+        "fault_injection",
+        "restart"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-015",
+      "title": "Operational evidence chain is incomplete",
+      "required_gates": [
+        "operational_evidence_chain",
+        "runtime_identity",
+        "frontend_identity"
+      ],
+      "required_modes": [
+        "always",
+        "browser"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-016",
+      "title": "Scanner is incomplete and analysis timeouts occur",
+      "required_gates": [
+        "scanner_terminality",
+        "scanner_no_retired_generations"
+      ],
+      "required_modes": [
+        "always",
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-017",
+      "title": "Canonical decisions do not reach Today Entries, Signal Ledger, or Model Paper",
+      "required_gates": [
+        "canonical_surface_reconciliation",
+        "performance_geometry_lineage"
+      ],
+      "required_modes": [
+        "always"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-018",
+      "title": "Signal-ledger health is not authoritative",
+      "required_gates": [
+        "signal_ledger_authority",
+        "canonical_surface_reconciliation"
+      ],
+      "required_modes": [
+        "always"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-019",
+      "title": "Research runtime READY is confused with research/model readiness",
+      "required_gates": [
+        "research_readiness_separation",
+        "research_retention_restart"
+      ],
+      "required_modes": [
+        "always",
+        "restart"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-020",
+      "title": "Official NSE evidence authority has no current required sources",
+      "required_gates": [
+        "official_nse_source_coverage"
+      ],
+      "required_modes": [
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-021",
+      "title": "Worker health classification is not progress-aware",
+      "required_gates": [
+        "worker_progress_truth",
+        "controller_watchdog"
+      ],
+      "required_modes": [
+        "always",
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-022",
+      "title": "Network revalidation is inefficient and failure-heavy",
+      "required_gates": [
+        "network_revalidation_efficiency"
+      ],
+      "required_modes": [
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-023",
+      "title": "Reference-data jobs can report OK with zero rows",
+      "required_gates": [
+        "reference_job_nonzero"
+      ],
+      "required_modes": [
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-024",
+      "title": "Diagnostic/API contracts are inconsistent",
+      "required_gates": [
+        "diagnostic_api_contract",
+        "runtime_identity",
+        "frontend_identity",
+        "identity_search"
+      ],
+      "required_modes": [
+        "always",
+        "browser"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-025",
+      "title": "Current v99 Market/Sector, Stock Report, Chart, MTF, S/R, and Research failures require fresh installed evidence",
+      "required_gates": [
+        "fresh_current_product_evidence",
+        "market_context_alignment",
+        "chart_api_dom_parity",
+        "mtf_visible_complete",
+        "sr_visible_semantics"
+      ],
+      "required_modes": [
+        "browser",
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-026",
+      "title": "No operator-visible live task monitor or useful-progress bars",
+      "required_gates": [
+        "operations_live_progress",
+        "worker_progress_truth"
+      ],
+      "required_modes": [
+        "always",
+        "browser"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-027",
+      "title": "No safe manual recovery controls or auditable controller actions",
+      "required_gates": [
+        "audited_safe_recovery_action",
+        "recovery_event_audit"
+      ],
+      "required_modes": [
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-028",
+      "title": "Selected Stock Report cannot meet universal Intraday latency/completeness and bulk work blocks foreground use",
+      "required_gates": [
+        "selected_stock_latency_completeness",
+        "scanner_terminality"
+      ],
+      "required_modes": [
+        "always",
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-029",
+      "title": "Market and sector rows use ambiguous aliases or mix stale direction with newer price",
+      "required_gates": [
+        "market_alias_direction_alignment",
+        "market_context_alignment"
+      ],
+      "required_modes": [
+        "browser",
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-030",
+      "title": "Operations Control Centre renders object/undefined text and lacks a concrete log/recovery trail",
+      "required_gates": [
+        "operations_log_trail",
+        "audited_safe_recovery_action"
+      ],
+      "required_modes": [
+        "browser",
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-031",
+      "title": "Signal Accuracy and Performance are not bound to complete canonical decision settlement geometry",
+      "required_gates": [
+        "performance_geometry_lineage",
+        "settlement_single_authority"
+      ],
+      "required_modes": [
+        "always"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-032",
+      "title": "Research evidence continuity can be hidden or regress across installation/restart",
+      "required_gates": [
+        "research_retention_restart",
+        "operational_evidence_chain"
+      ],
+      "required_modes": [
+        "always",
+        "restart"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-033",
+      "title": "Foreground selected-stock usefulness is coupled to stale orchestration leases",
+      "required_gates": [
+        "selected_stock_orchestration_isolation",
+        "selected_stock_latency_completeness"
+      ],
+      "required_modes": [
+        "fault_injection",
+        "session"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-034",
+      "title": "Scanner analysis workers can saturate with retired generations still active",
+      "required_gates": [
+        "scanner_no_retired_generations",
+        "scanner_terminality"
+      ],
+      "required_modes": [
+        "always",
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-035",
+      "title": "Autonomic controller can become stuck while evaluating its own blocker graph",
+      "required_gates": [
+        "controller_watchdog"
+      ],
+      "required_modes": [
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-036",
+      "title": "Operations diagnostics depend on unhealthy live services and can time out",
+      "required_gates": [
+        "operations_local_projection",
+        "operations_log_trail"
+      ],
+      "required_modes": [
+        "browser",
+        "fault_injection"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    },
+    {
+      "id": "DL-037",
+      "title": "Signal settlement has duplicate execution authorities",
+      "required_gates": [
+        "settlement_single_authority",
+        "performance_geometry_lineage"
+      ],
+      "required_modes": [
+        "always"
+      ],
+      "closure_policy": "CLOSED only when every required installed gate is PASS on the exact installed build; NOT_APPLICABLE is forbidden for listed gates"
+    }
+  ],
+  "content_sha256": "2e097d1846947bb1d6b8128b6d3eae78808219ce99501ccd4daa7fffa444a1ca"
+}

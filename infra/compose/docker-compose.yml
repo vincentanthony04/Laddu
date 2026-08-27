@@ -1,0 +1,70 @@
+name: project-laddu-data-plane
+services:
+  operational-postgres:
+    image: postgres:18.4
+    container_name: project-laddu-operational-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: laddu_operational
+      POSTGRES_USER: laddu_admin
+      POSTGRES_PASSWORD: ${LADDU_OPERATIONAL_ADMIN_PASSWORD}
+    ports:
+      - "127.0.0.1:${LADDU_OPERATIONAL_PORT:-15432}:5432"
+    volumes:
+      - laddu_operational_pg:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U laddu_admin -d laddu_operational"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  governance-postgres:
+    image: postgres:18.4
+    container_name: project-laddu-governance-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: laddu_governance
+      POSTGRES_USER: laddu_admin
+      POSTGRES_PASSWORD: ${LADDU_GOVERNANCE_ADMIN_PASSWORD}
+    ports:
+      - "127.0.0.1:${LADDU_GOVERNANCE_PORT:-15433}:5432"
+    volumes:
+      - laddu_governance_pg:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U laddu_admin -d laddu_governance"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+
+  questdb:
+    image: questdb/questdb:9.4.3
+    container_name: project-laddu-questdb
+    restart: unless-stopped
+    # The Windows host port is resolved and socket-bind proven by the installer.
+    # PG wire remains available inside the Docker network; no unnecessary host
+    # binding is exposed.
+    ports:
+      - "127.0.0.1:${LADDU_QUESTDB_HTTP_PORT:-0}:9000"
+    volumes:
+      - laddu_questdb:/var/lib/questdb
+    environment:
+      QDB_HTTP_BIND_TO: 0.0.0.0:9000
+      QDB_LINE_HTTP_ENABLED: "true"
+      QDB_PG_ENABLED: "true"
+    deploy:
+      resources:
+        limits:
+          memory: 3G
+
+volumes:
+  laddu_operational_pg:
+  laddu_governance_pg:
+  laddu_questdb:

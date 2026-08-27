@@ -1,0 +1,26 @@
+{
+  "version": "instrument-brand-sources-2.0.0",
+  "policy": "Issuer-owned assets remain preferred. The governed NSE/BSE open-source catalogue is a bounded discovery and cache source; every downloaded SVG/image is sanitised, size-bounded, content-hashed and persisted locally before the UI may render it.",
+  "sources": [
+    {
+      "symbol": "TCS",
+      "exchange": "NSE",
+      "source_authority": "ISSUER_OFFICIAL_SITE",
+      "source_url": "https://www.tcs.com/content/dam/global-tcs/en/images/who-we-are/media-kit/logo-rgb-black.png",
+      "allowed_host": "www.tcs.com",
+      "required": false
+    }
+  ],
+  "catalogues": [
+    {
+      "catalogue_key": "indian_listed_company_logos",
+      "enabled": true,
+      "required": true,
+      "source_authority": "GOVERNED_OPEN_SOURCE_LOGO_REPOSITORY",
+      "manifest_url": "https://dharunashokkumar.github.io/indian-listed-company-logos/data/logos.json",
+      "asset_base_url": "https://dharunashokkumar.github.io/indian-listed-company-logos/",
+      "allowed_host": "dharunashokkumar.github.io",
+      "max_assets_per_run": 600
+    }
+  ]
+}

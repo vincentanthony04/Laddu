@@ -1,0 +1,527 @@
+{
+  "version": "stable-synthetic-factor-dedup-1.0.0",
+  "threshold": 0.995,
+  "panels": 2,
+  "pair_count": 114,
+  "factor_count_in_pairs": 158,
+  "canonical_count": 69,
+  "redundant_count": 89,
+  "redundant_factors": {
+    "academic_strev": {
+      "canonical": "academic_mkt_rf",
+      "correlation": -1.0,
+      "relationship": "inverse"
+    },
+    "alpha101_051": {
+      "canonical": "alpha101_049",
+      "correlation": 0.998430432406726,
+      "relationship": "same"
+    },
+    "qlib158_cntn10": {
+      "canonical": "qlib158_cntd10",
+      "correlation": -1.0,
+      "relationship": "inverse"
+    },
+    "qlib158_cntn20": {
+      "canonical": "qlib158_cntd20",
+      "correlation": -1.0,
+      "relationship": "inverse"
+    },
+    "qlib158_cntn30": {
+      "canonical": "qlib158_cntd30",
+      "correlation": -0.9999999999999999,
+      "relationship": "inverse"
+    },
+    "qlib158_cntn5": {
+      "canonical": "qlib158_cntd5",
+      "correlation": -0.9999999999999999,
+      "relationship": "inverse"
+    },
+    "qlib158_cntn60": {
+      "canonical": "qlib158_cntd60",
+      "correlation": -0.9999999999999996,
+      "relationship": "inverse"
+    },
+    "qlib158_cntp10": {
+      "canonical": "qlib158_cntd10",
+      "correlation": 0.9999999999999999,
+      "relationship": "same"
+    },
+    "qlib158_cntp20": {
+      "canonical": "qlib158_cntd20",
+      "correlation": 0.9999999999999998,
+      "relationship": "same"
+    },
+    "qlib158_cntp30": {
+      "canonical": "qlib158_cntd30",
+      "correlation": 1.0000000000000002,
+      "relationship": "same"
+    },
+    "qlib158_cntp5": {
+      "canonical": "qlib158_cntd5",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "qlib158_cntp60": {
+      "canonical": "qlib158_cntd60",
+      "correlation": 1.0000000000000004,
+      "relationship": "same"
+    },
+    "qlib158_kmid2": {
+      "canonical": "alpha101_101",
+      "correlation": 0.9999999948200861,
+      "relationship": "same"
+    },
+    "qlib158_ksft2": {
+      "canonical": "alpha101_054",
+      "correlation": -0.9965196457047276,
+      "relationship": "inverse"
+    },
+    "qlib158_resi10": {
+      "canonical": "qlib158_ma10",
+      "correlation": -0.9999999999999989,
+      "relationship": "inverse"
+    },
+    "qlib158_resi20": {
+      "canonical": "qlib158_ma20",
+      "correlation": -1.0000000000000004,
+      "relationship": "inverse"
+    },
+    "qlib158_resi30": {
+      "canonical": "qlib158_ma30",
+      "correlation": -0.9999999999999991,
+      "relationship": "inverse"
+    },
+    "qlib158_resi5": {
+      "canonical": "qlib158_ma5",
+      "correlation": -1.0000000000000004,
+      "relationship": "inverse"
+    },
+    "qlib158_resi60": {
+      "canonical": "qlib158_ma60",
+      "correlation": -1.0000000000000002,
+      "relationship": "inverse"
+    },
+    "qlib158_roc10": {
+      "canonical": "qlib158_beta10",
+      "correlation": 0.9963373514990088,
+      "relationship": "same"
+    },
+    "qlib158_roc5": {
+      "canonical": "qlib158_beta5",
+      "correlation": 0.9981812682977687,
+      "relationship": "same"
+    },
+    "qlib158_sumn10": {
+      "canonical": "qlib158_sumd10",
+      "correlation": -0.9999999999999998,
+      "relationship": "inverse"
+    },
+    "qlib158_sumn20": {
+      "canonical": "qlib158_sumd20",
+      "correlation": -1.0,
+      "relationship": "inverse"
+    },
+    "qlib158_sumn30": {
+      "canonical": "qlib158_sumd30",
+      "correlation": -1.0000000000000002,
+      "relationship": "inverse"
+    },
+    "qlib158_sumn5": {
+      "canonical": "qlib158_sumd5",
+      "correlation": -1.0000000000000004,
+      "relationship": "inverse"
+    },
+    "qlib158_sumn60": {
+      "canonical": "qlib158_sumd60",
+      "correlation": -0.9999999999999998,
+      "relationship": "inverse"
+    },
+    "qlib158_sump10": {
+      "canonical": "qlib158_sumd10",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "qlib158_sump20": {
+      "canonical": "qlib158_sumd20",
+      "correlation": 0.9999999999999999,
+      "relationship": "same"
+    },
+    "qlib158_sump30": {
+      "canonical": "qlib158_sumd30",
+      "correlation": 0.9999999999999996,
+      "relationship": "same"
+    },
+    "qlib158_sump5": {
+      "canonical": "qlib158_sumd5",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "qlib158_sump60": {
+      "canonical": "qlib158_sumd60",
+      "correlation": 0.9999999999999998,
+      "relationship": "same"
+    },
+    "qlib158_vma30": {
+      "canonical": "qlib158_vma20",
+      "correlation": 0.9964829499443022,
+      "relationship": "same"
+    },
+    "qlib158_vstd30": {
+      "canonical": "qlib158_vstd20",
+      "correlation": 0.9974199255539613,
+      "relationship": "same"
+    },
+    "qlib158_vstd60": {
+      "canonical": "qlib158_vstd20",
+      "correlation": 0.9955435822629229,
+      "relationship": "same"
+    },
+    "qlib158_vsumn10": {
+      "canonical": "qlib158_vsumd10",
+      "correlation": -1.0000000000000004,
+      "relationship": "inverse"
+    },
+    "qlib158_vsumn20": {
+      "canonical": "qlib158_vsumd20",
+      "correlation": -1.0,
+      "relationship": "inverse"
+    },
+    "qlib158_vsumn30": {
+      "canonical": "qlib158_vsumd30",
+      "correlation": -0.9999999999999998,
+      "relationship": "inverse"
+    },
+    "qlib158_vsumn5": {
+      "canonical": "qlib158_vsumd5",
+      "correlation": -1.0,
+      "relationship": "inverse"
+    },
+    "qlib158_vsumn60": {
+      "canonical": "qlib158_vsumd60",
+      "correlation": -1.0,
+      "relationship": "inverse"
+    },
+    "qlib158_vsump10": {
+      "canonical": "qlib158_vsumd10",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "qlib158_vsump20": {
+      "canonical": "qlib158_vsumd20",
+      "correlation": 0.9999999999999998,
+      "relationship": "same"
+    },
+    "qlib158_vsump30": {
+      "canonical": "qlib158_vsumd30",
+      "correlation": 0.9999999999999993,
+      "relationship": "same"
+    },
+    "qlib158_vsump5": {
+      "canonical": "qlib158_vsumd5",
+      "correlation": 1.0000000000000004,
+      "relationship": "same"
+    },
+    "qlib158_vsump60": {
+      "canonical": "qlib158_vsumd60",
+      "correlation": 1.0000000000000004,
+      "relationship": "same"
+    },
+    "gtja191_004": {
+      "canonical": "alpha101_021",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_005": {
+      "canonical": "alpha101_026",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_007": {
+      "canonical": "alpha101_011",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_013": {
+      "canonical": "alpha101_041",
+      "correlation": 0.9999999999925997,
+      "relationship": "same"
+    },
+    "gtja191_016": {
+      "canonical": "alpha101_050",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_018": {
+      "canonical": "qlib158_beta5",
+      "correlation": 0.998181268297768,
+      "relationship": "same"
+    },
+    "gtja191_019": {
+      "canonical": "qlib158_beta5",
+      "correlation": 0.9994546358611981,
+      "relationship": "same"
+    },
+    "gtja191_032": {
+      "canonical": "alpha101_015",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_034": {
+      "canonical": "gtja191_031",
+      "correlation": -0.9986997680565,
+      "relationship": "inverse"
+    },
+    "gtja191_037": {
+      "canonical": "alpha101_008",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_038": {
+      "canonical": "alpha101_023",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_042": {
+      "canonical": "alpha101_040",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_050": {
+      "canonical": "gtja191_049",
+      "correlation": -1.0000000000000004,
+      "relationship": "inverse"
+    },
+    "gtja191_051": {
+      "canonical": "gtja191_049",
+      "correlation": -1.0000000000000002,
+      "relationship": "inverse"
+    },
+    "gtja191_058": {
+      "canonical": "qlib158_cntd20",
+      "correlation": 1.0000000000000002,
+      "relationship": "same"
+    },
+    "gtja191_062": {
+      "canonical": "alpha101_044",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_066": {
+      "canonical": "gtja191_065",
+      "correlation": -0.9994477455145652,
+      "relationship": "inverse"
+    },
+    "gtja191_083": {
+      "canonical": "alpha101_016",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_085": {
+      "canonical": "alpha101_043",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_086": {
+      "canonical": "alpha101_046",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_087": {
+      "canonical": "alpha101_066",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_088": {
+      "canonical": "qlib158_roc20",
+      "correlation": 0.9999999999999998,
+      "relationship": "same"
+    },
+    "gtja191_099": {
+      "canonical": "alpha101_013",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_103": {
+      "canonical": "qlib158_imin20",
+      "correlation": -0.9999999999999989,
+      "relationship": "inverse"
+    },
+    "gtja191_104": {
+      "canonical": "alpha101_022",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_105": {
+      "canonical": "alpha101_003",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_107": {
+      "canonical": "alpha101_020",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_113": {
+      "canonical": "alpha101_045",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_114": {
+      "canonical": "alpha101_083",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_117": {
+      "canonical": "alpha101_035",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_120": {
+      "canonical": "alpha101_042",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_123": {
+      "canonical": "alpha101_099",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_133": {
+      "canonical": "qlib158_imxd20",
+      "correlation": -0.9999999999999999,
+      "relationship": "inverse"
+    },
+    "gtja191_136": {
+      "canonical": "alpha101_014",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_139": {
+      "canonical": "alpha101_006",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_142": {
+      "canonical": "alpha101_017",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_153": {
+      "canonical": "gtja191_126",
+      "correlation": 0.9986679084790001,
+      "relationship": "same"
+    },
+    "gtja191_157": {
+      "canonical": "alpha101_029",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_158": {
+      "canonical": "qlib158_klen",
+      "correlation": 0.9996808968695907,
+      "relationship": "same"
+    },
+    "gtja191_163": {
+      "canonical": "alpha101_025",
+      "correlation": 1.0,
+      "relationship": "same"
+    },
+    "gtja191_170": {
+      "canonical": "alpha101_047",
+      "correlation": 0.9999656602383566,
+      "relationship": "same"
+    },
+    "gtja191_173": {
+      "canonical": "gtja191_126",
+      "correlation": 0.9987716402007721,
+      "relationship": "same"
+    },
+    "gtja191_176": {
+      "canonical": "alpha101_055",
+      "correlation": -1.0,
+      "relationship": "inverse"
+    },
+    "gtja191_177": {
+      "canonical": "qlib158_imax20",
+      "correlation": -1.0000000000000002,
+      "relationship": "inverse"
+    },
+    "gtja191_184": {
+      "canonical": "alpha101_037",
+      "correlation": 1.0,
+      "relationship": "same"
+    }
+  },
+  "canonical_factors": [
+    "academic_mkt_rf",
+    "alpha101_003",
+    "alpha101_006",
+    "alpha101_008",
+    "alpha101_011",
+    "alpha101_013",
+    "alpha101_014",
+    "alpha101_015",
+    "alpha101_016",
+    "alpha101_017",
+    "alpha101_020",
+    "alpha101_021",
+    "alpha101_022",
+    "alpha101_023",
+    "alpha101_025",
+    "alpha101_026",
+    "alpha101_029",
+    "alpha101_035",
+    "alpha101_037",
+    "alpha101_040",
+    "alpha101_041",
+    "alpha101_042",
+    "alpha101_043",
+    "alpha101_044",
+    "alpha101_045",
+    "alpha101_046",
+    "alpha101_047",
+    "alpha101_049",
+    "alpha101_050",
+    "alpha101_054",
+    "alpha101_055",
+    "alpha101_066",
+    "alpha101_083",
+    "alpha101_099",
+    "alpha101_101",
+    "qlib158_beta10",
+    "qlib158_beta5",
+    "qlib158_cntd10",
+    "qlib158_cntd20",
+    "qlib158_cntd30",
+    "qlib158_cntd5",
+    "qlib158_cntd60",
+    "qlib158_imax20",
+    "qlib158_imin20",
+    "qlib158_imxd20",
+    "qlib158_klen",
+    "qlib158_ma10",
+    "qlib158_ma20",
+    "qlib158_ma30",
+    "qlib158_ma5",
+    "qlib158_ma60",
+    "qlib158_roc20",
+    "qlib158_sumd10",
+    "qlib158_sumd20",
+    "qlib158_sumd30",
+    "qlib158_sumd5",
+    "qlib158_sumd60",
+    "qlib158_vma20",
+    "qlib158_vma60",
+    "qlib158_vstd20",
+    "qlib158_vsumd10",
+    "qlib158_vsumd20",
+    "qlib158_vsumd30",
+    "qlib158_vsumd5",
+    "qlib158_vsumd60",
+    "gtja191_031",
+    "gtja191_049",
+    "gtja191_065",
+    "gtja191_126"
+  ]
+}

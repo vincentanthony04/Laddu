@@ -1,0 +1,158 @@
+{
+  "source": "user-installed-r2-runtime-evidence-2026-08-19",
+  "captured_at": "2026-08-19T13:37:29.466Z",
+  "runtime": {
+    "version": "v131.0.0",
+    "time": "2026-08-19T19:07:07+05:30",
+    "trust": {
+      "ok": true,
+      "version": "trader-trust-state-1.0.0",
+      "state": "TRUSTED",
+      "decision_admission_allowed": true,
+      "market_open": false,
+      "reason": "data/read-model path current and no critical runtime blocker",
+      "reasons": [
+        "data/read-model path current and no critical runtime blocker"
+      ],
+      "controller": {
+        "state": "RECOVERING",
+        "primary_blocker": {
+          "key": "exact_build_browser_workflows",
+          "state": "PENDING_EVIDENCE",
+          "detail": "exact build browser workflows",
+          "component": "operator_read_models",
+          "safe_action": "EVIDENCE_REQUIRED",
+          "score": 94
+        },
+        "runtime_blocker_count": 0
+      },
+      "database": {
+        "governance": {
+          "pool_size": 3,
+          "pool_available": 2,
+          "requests_waiting": 0,
+          "requests_queued": 4,
+          "pressured": false,
+          "saturated": false,
+          "recovering": false,
+          "usable": true,
+          "state": "HEALTHY",
+          "recovery_state": "HEALTHY",
+          "pool_generation": 1,
+          "recovery_epoch": 0,
+          "replacement_policy": "VERIFIED_GENERATION_ATOMIC_SWAP",
+          "admission_waiters": 0,
+          "reconnect_failures": 0,
+          "last_pool_error": null
+        },
+        "interactive": {
+          "pool_size": 4,
+          "pool_available": 4,
+          "requests_waiting": 0,
+          "requests_queued": 4,
+          "pressured": false,
+          "saturated": false,
+          "recovering": false,
+          "usable": true,
+          "state": "HEALTHY",
+          "recovery_state": "HEALTHY",
+          "pool_generation": 1,
+          "recovery_epoch": 0,
+          "replacement_policy": "VERIFIED_GENERATION_ATOMIC_SWAP",
+          "admission_waiters": 0,
+          "reconnect_failures": 0,
+          "last_pool_error": null
+        }
+      },
+      "latency": {
+        "version": "http-latency-monitor-1.0.0",
+        "routes": {
+          "stock_snapshot": {
+            "route": "GET /api/stock-snapshot",
+            "samples": 13,
+            "last_ms": 98,
+            "p50_ms": 164,
+            "p95_ms": 577.4,
+            "max_ms": 869,
+            "window_sec": 300
+          },
+          "chart": {
+            "route": "GET /api/chart-data",
+            "samples": 0,
+            "last_ms": null,
+            "p50_ms": null,
+            "p95_ms": null,
+            "max_ms": null,
+            "window_sec": 300
+          },
+          "live_chart": {
+            "route": "GET /api/live-chart-bar",
+            "samples": 0,
+            "last_ms": null,
+            "p50_ms": null,
+            "p95_ms": null,
+            "max_ms": null,
+            "window_sec": 300
+          },
+          "workspace": {
+            "route": "GET /api/trader-workspace",
+            "samples": 3,
+            "last_ms": 841,
+            "p50_ms": 310,
+            "p95_ms": 787.9,
+            "max_ms": 841,
+            "window_sec": 300
+          }
+        },
+        "customer_read_p95_ms": 577.4,
+        "customer_read_samples": 13
+      },
+      "policy": "TRUSTED requires no critical runtime blocker and bounded customer-read latency; DO_NOT_TRUST suppresses customer trade admission without changing canonical stored evidence."
+    },
+    "index_levels": {
+      "state": "RUNNING",
+      "stage": "expected_idle",
+      "completed": 16,
+      "heartbeat_age_sec": 8.8,
+      "progress_age_sec": 298.9,
+      "last_error": null,
+      "progress_token": "REFRESHED|None|index-levels:1:2026-08-19T19:02:08+05:30|None|16|None|None|0|None"
+    },
+    "coverage": {
+      "delivery": {
+        "state": "RUNNING",
+        "stage": "continuing_sweep",
+        "completed": 2560,
+        "total": 4137,
+        "progress_pct": 61.9,
+        "progress_token": "continuing_sweep|delivery|2560|61.9|2560|None|None|None|False"
+      },
+      "intraday": {
+        "state": "RUNNING",
+        "stage": "closed_market_ready",
+        "completed": 2366,
+        "total": 3364,
+        "progress_pct": 70.3,
+        "progress_token": "closed_market_ready|None|2366|70.3|2366|None|None|None|False"
+      }
+    },
+    "live_stream": {
+      "state": "EXPECTED_IDLE",
+      "stage": "degraded",
+      "waiting_on": "market closed; stream freshness not required",
+      "progress_token": "0:None:0:122:degraded"
+    }
+  },
+  "browser_stale_projection_observed": {
+    "trust_state": "DO_NOT_TRUST",
+    "trust_reason": "index_levels no_progress",
+    "system_state": "BLOCKED",
+    "market_state": "CLOSED"
+  },
+  "expected_contract": {
+    "browser_must_choose_newer_runtime_trust": true,
+    "index_refreshed_must_not_render_no_progress": true,
+    "incomplete_coverage_must_be_provisional": true,
+    "market_closed_must_not_render_live_validation": true
+  }
+}

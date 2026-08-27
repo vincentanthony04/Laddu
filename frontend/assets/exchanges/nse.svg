@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NSE exchange mark">
+  <rect width="64" height="64" rx="12" fill="#ffffff"/>
+  <path d="M9 38 23 13h13L22 38H9Z" fill="#ef4b2f"/>
+  <path d="M25 51 39 26h16L41 51H25Z" fill="#2b78c5"/>
+  <path d="M26 13h13l16 25H42L26 13Z" fill="#ef9f2d" opacity=".95"/>
+  <text x="32" y="59" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="8" font-weight="700" fill="#334155">NSE</text>
+</svg>

@@ -1,0 +1,269 @@
+{
+  "authoritative_parent": "v104.0.0",
+  "contract_version": "data-plane-migration-lineage-2.0.0",
+  "forbidden_new_migration_patterns": [
+    "\\bDELETE\\s+FROM\\b",
+    "\\bTRUNCATE\\b",
+    "\\bDROP\\s+TABLE\\b",
+    "\\bDROP\\s+SCHEMA\\b",
+    "\\bDROP\\s+COLUMN\\b",
+    "\\bALTER\\s+TABLE\\b[^;]*\\bRENAME\\b",
+    "\\bALTER\\s+COLUMN\\b[^;]*\\bTYPE\\b"
+  ],
+  "governance": [
+    {
+      "name": "001_governance.sql",
+      "parent_required": true,
+      "path": "infra/postgres/governance/001_governance.sql",
+      "sha256": "90b7c889203b98b1955664a6e973270dd0a6bd23ebe9985c37e31761171ab019",
+      "version": 680001
+    },
+    {
+      "name": "002_training_publication.sql",
+      "parent_required": true,
+      "path": "infra/postgres/governance/002_training_publication.sql",
+      "sha256": "c56a0c07aa587961395e4132ae98f4f26cf1a4828f2d388f4658266cb602f39a",
+      "version": 680002
+    },
+    {
+      "name": "003_forward_evidence_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/governance/003_forward_evidence_authority.sql",
+      "sha256": "cf50850922d1c46919cbd503c807399686250f26346c558cce3d2092b7f4e956",
+      "version": 680003
+    },
+    {
+      "name": "004_level5_learning_loop_governance.sql",
+      "parent_required": false,
+      "path": "infra/postgres/governance/004_level5_learning_loop_governance.sql",
+      "sha256": "3deef56c60421a99ebf27caa6708ba21e7dbdb9b2dace6d31f8870e8e10f1632",
+      "version": 680004
+    },
+    {
+      "name": "005_legacy_research_quarantine.sql",
+      "parent_required": false,
+      "path": "infra/postgres/governance/005_legacy_research_quarantine.sql",
+      "sha256": "6edf48abcef13d44a908ebb7f0a92e59e39d866cb0bb3f6b2ce0da2cde0f3f1e",
+      "version": 680005
+    },
+    {
+      "name": "006_legacy_research_migration_checkpoint.sql",
+      "parent_required": false,
+      "path": "infra/postgres/governance/006_legacy_research_migration_checkpoint.sql",
+      "sha256": "494383501bac1eadd34aeadba428e7329bdb132f23921da3f438288572f9c329",
+      "version": 680006
+    },
+    {
+      "name": "007_r26_wfa_query_indexes.sql",
+      "parent_required": false,
+      "path": "infra/postgres/governance/007_r26_wfa_query_indexes.sql",
+      "sha256": "eaa49a7a5b9f80ce8489c47f40c746ec3c1139d54757a257467e7aa9b2358563",
+      "version": 680007
+    },
+    {
+      "name": "008_training_validation_evidence.sql",
+      "parent_required": false,
+      "path": "infra/postgres/governance/008_training_validation_evidence.sql",
+      "sha256": "b14f72df9614c1ab592b1074fdd13d0a12d40b2979a5c0c51e0ba179d02df59c",
+      "version": 680008
+    }
+  ],
+  "operational": [
+    {
+      "name": "001_operational.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/001_operational.sql",
+      "sha256": "89deaeb0f7e07a0e43b5e564e639c3f1e579368145c517ba9843c5ec9f2db719",
+      "version": 680000
+    },
+    {
+      "name": "002_v69_8_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/002_v69_8_authority.sql",
+      "sha256": "b354e9aa79ab55469e46d987c37d1bc5172566c3630ca7192f168d86221a4d42",
+      "version": 680001
+    },
+    {
+      "name": "003_kv_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/003_kv_authority.sql",
+      "sha256": "6476c5e1d66b1e05c47f3e4502c44f25dca0de399f756a89fc3f2a4793fc2394",
+      "version": 680002
+    },
+    {
+      "name": "004_manual_watch_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/004_manual_watch_authority.sql",
+      "sha256": "4bce0c79d8e2ec1353323b227f9bba9d46975d0233420ae6b233869c81108362",
+      "version": 680003
+    },
+    {
+      "name": "005_opportunity_memory_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/005_opportunity_memory_authority.sql",
+      "sha256": "7d0f5baa2f925c5c2625202824faa94d67e304693630cbd28dd008751dabaaad",
+      "version": 680004
+    },
+    {
+      "name": "006_reference_data_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/006_reference_data_authority.sql",
+      "sha256": "3e5bb3fa7e0fd0d60d2309aa12a484236415dcdfe25e263ee52cc353384708b2",
+      "version": 680005
+    },
+    {
+      "name": "007_runtime_lifecycle_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/007_runtime_lifecycle_authority.sql",
+      "sha256": "8e816750ef8ea43c460c36c3ea4d576ae654ea100dfe199906a47065112f3b0c",
+      "version": 680006
+    },
+    {
+      "name": "008_universe_snapshot_refresh.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/008_universe_snapshot_refresh.sql",
+      "sha256": "ea678b5e4fbce560a7b63a228b59d1b2bded54558d32c6d9da02ed19be25ec09",
+      "version": 680007
+    },
+    {
+      "name": "009_compatibility_migration_keys.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/009_compatibility_migration_keys.sql",
+      "sha256": "182ebb4b5ceefc3356f90d3dcc6ecda12c27468577c3368eac4cbbd35d266dfe",
+      "version": 680008
+    },
+    {
+      "name": "010_dual_desk_runtime_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/010_dual_desk_runtime_authority.sql",
+      "sha256": "1d871d6f56a5ab4ce507f8d9622ce24cc02cdab3c72dbb013e41d387f181326a",
+      "version": 680009
+    },
+    {
+      "name": "011_retired_options_tombstone.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/011_retired_options_tombstone.sql",
+      "sha256": "812882e993982b545598235dbc683934b313ab8e36543c4f486dd1d538b8de96",
+      "version": 680010
+    },
+    {
+      "name": "012_strict_two_desk_cleanup.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/012_strict_two_desk_cleanup.sql",
+      "sha256": "26d3aafb43c6fd78d96a1a29686c3ca2f2b277aee20abaf16a0eb2a6e8a7ff25",
+      "version": 680011
+    },
+    {
+      "name": "013_corporate_action_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/013_corporate_action_authority.sql",
+      "sha256": "d871e2c25cc0809ec66f524bad76a5c681e8a79e881e684b181641d547cf4e51",
+      "version": 680012
+    },
+    {
+      "name": "014_nse_official_data_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/014_nse_official_data_authority.sql",
+      "sha256": "96f0a89197101cea6d4ae92e22eb204cea80100076a8e9d8f6086265a06db45b",
+      "version": 680013
+    },
+    {
+      "name": "015_priority_pipeline_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/015_priority_pipeline_authority.sql",
+      "sha256": "ac55a4fd7d70206652a30cfbb72b2bea5cca00ebe91c3589b5c80512f9e7cd6c",
+      "version": 680014
+    },
+    {
+      "name": "016_level5_evidence_recovery_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/016_level5_evidence_recovery_authority.sql",
+      "sha256": "46d4ce067a4b2b31cde5385da6b1cb5c182051f4fd706ac8542fea05ccdacd98",
+      "version": 680015
+    },
+    {
+      "name": "017_level5_qualification_proof_authority.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/017_level5_qualification_proof_authority.sql",
+      "sha256": "628e7c759168dd747746e95c2d3c37adb7d1736a89aef78d7393e750aa21981b",
+      "version": 680016
+    },
+    {
+      "name": "018_runtime_control_runtime_grants.sql",
+      "parent_required": true,
+      "path": "infra/postgres/operational/018_runtime_control_runtime_grants.sql",
+      "sha256": "eb3097c5306a8331b37eee5f76bb1d015c6c7f1323372cc30bb7ccbc370932da",
+      "version": 680017
+    },
+    {
+      "name": "019_level5_signal_learning_authority.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/019_level5_signal_learning_authority.sql",
+      "sha256": "cce98be555a4897ac2ce6a3d66afbec35a3d7e5d47d85ea6b8bbbe036910a8fb",
+      "version": 680018
+    },
+    {
+      "name": "020_model_paper_venue_authority.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/020_model_paper_venue_authority.sql",
+      "sha256": "7fd3361855fac66679eb31ee802bb88e24f02a18b5ee4fa7eb75620114cc367c",
+      "version": 680019
+    },
+    {
+      "name": "021_model_paper_relational_lineage_authority.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/021_model_paper_relational_lineage_authority.sql",
+      "sha256": "2305d3e18279bd30aaa11badfde6edf087345ee5e7ce047c20b45129558915e2",
+      "version": 680020
+    },
+    {
+      "name": "022_signal_age_attribution_authority.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/022_signal_age_attribution_authority.sql",
+      "sha256": "cb24371f54237543f358582d6691bb77ab911ce44f641ba096b14e73b8a0a484",
+      "version": 680021
+    },
+    {
+      "name": "023_open_position_gap_recovery_authority.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/023_open_position_gap_recovery_authority.sql",
+      "sha256": "5a7a53dfd8ee55d7c87af394f7be7f18ccdcfe1a132d18ccf127451be0ddea05",
+      "version": 680022
+    },
+    {
+      "name": "024_execution_slippage_calibration_authority.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/024_execution_slippage_calibration_authority.sql",
+      "sha256": "ac5b81947447fd6a069e9e03fadc0d5855ca5aedb360d3013eb7b1084e705fcb",
+      "version": 680023
+    },
+    {
+      "name": "025_current_managed_risk_authority.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/025_current_managed_risk_authority.sql",
+      "sha256": "93e0de740d7495677319d49d48829eb415021799f06ada4a53fc8622883cd827",
+      "version": 680024
+    },
+    {
+      "name": "026_canonical_lifecycle_read_indexes.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/026_canonical_lifecycle_read_indexes.sql",
+      "sha256": "e435a419e658d102b4d0441d78884fdefe28ffae1da397cfaee1af39cab9a35c",
+      "version": 680025
+    },
+    {
+      "name": "027_canonical_lifecycle_projection.sql",
+      "parent_required": false,
+      "path": "infra/postgres/operational/027_canonical_lifecycle_projection.sql",
+      "sha256": "c822fbeabb12af6a98e46725db98ddb35a85cb14793f45160b050a29f70c0986",
+      "version": 680026
+    }
+  ],
+  "policy": "PARENT_LEDGER_EXACT_NEW_MIGRATIONS_FORWARD_ONLY_ADDITIVE",
+  "questdb": {
+    "name": "001_market_data.sql",
+    "parent_required": true,
+    "path": "infra/questdb/001_market_data.sql",
+    "sha256": "12ac1440b1307afd818fbd578db3d9f9d6c2727488a3d17034e4cccf2537190f"
+  }
+}

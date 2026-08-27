@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" data-build-version="v131.1.6" data-frontend-owner="standalone-v131.1.6" data-build-marker="production-usability-r8-pl46-defect-cluster-closure-8086" data-ui-merge="r8-pl46-defect-cluster-closure-ui7" data-ui-redesign="FINTECH_COMMAND_CENTER" data-ui-version="UI7">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <title>Project Laddu · R8 · PL46 · 8086</title>
+  <link rel="icon" href="/assets/laddu-king.ico">
+  <link rel="stylesheet" href="/app.css?v=131.1.6-r8-pl46-defect-cluster-closure-8086&ui=7"><link rel="stylesheet" href="/ui-system.css?v=131.1.6-r8-pl46-defect-cluster-closure-8086&ui=7">
+</head>
+<body class="ui5-redesign">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#workspace" aria-label="Project Laddu workspace">
+        <img src="/assets/laddu-king.png" alt="">
+        <span><strong>Project Laddu</strong><small>Live market intelligence</small></span>
+      </a>
+      <button id="navCollapse" class="nav-collapse" type="button" aria-label="Collapse navigation" title="Collapse navigation">◀</button>
+      <nav aria-label="Primary navigation">
+        <button class="nav-link active" data-page="workspace" title="Actionable"><span>01</span><b>Actionable</b></button>
+        <button class="nav-link" data-page="report" title="Stock Intelligence"><span>02</span><b>Stock Intelligence</b></button>
+        <button class="nav-link" data-page="model-paper" title="Model Paper"><span>03</span><b>Model Paper</b></button>
+        <button class="nav-link" data-page="accuracy" title="Accuracy & Performance"><span>04</span><b>Accuracy</b></button>
+        <button class="nav-link" data-page="research" title="Research & Learning"><span>05</span><b>Research</b></button>
+        <button class="nav-link" data-page="system" title="Engineering Diagnostics"><span>06</span><b>Diagnostics</b></button>
+      </nav>
+      <div class="authority-boundary">
+        <i></i><span><b>Model Paper only</b><small>Broker authority: NONE</small></span>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <button id="menuButton" class="menu-button" type="button" aria-label="Toggle navigation">Menu</button>
+        <form id="stockSearch" class="stock-search" role="search">
+          <label for="stockQuery">Search ordinary cash equity</label>
+          <input id="stockQuery" autocomplete="off" placeholder="RELIANCE, TCS, INFY…">
+          <select id="stockMode" aria-label="Desk"><option value="delivery">Delivery</option><option value="intraday">Intraday</option></select>
+          <button type="submit">Open report</button>
+          <div id="suggestions" class="suggestions" role="listbox" hidden></div>
+        </form>
+        <div class="topbar-status" aria-label="Market and appearance status">
+          <button id="progressQuick" class="progress-quick-button" type="button" title="Open live progress and proof">Diagnostics</button>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch light / dark theme">Light</button>
+          <div id="globalMarketState" class="state-pill neutral"><i></i><span>Connecting</span></div>
+          <div id="versionPill" class="version-pill">v131 · R8 · PL46 · 8086</div><span class="ui-refinement-badge" title="Complete fintech redesign">UI7 · redesigned actionable</span>
+        </div>
+      </header>
+      <div id="globalNotice" class="global-notice" hidden></div>
+      <div id="trustStrip" class="trust-strip trust-warming" role="status" aria-live="polite">
+        <span class="trust-dot"></span><b>TRUST CHECK</b><span id="trustState">WARMING</span><span id="trustReason">Waiting for runtime trust projection</span><span id="trustCadenceIntraday" class="trust-cadence">Intraday cadence warming</span><span id="trustCadenceDelivery" class="trust-cadence">Delivery cadence warming</span><span id="trustLatency"></span>
+      </div>
+
+      <main>
+        <section class="page active simple-workspace workstation-workspace" data-page-panel="workspace">
+          <section class="workspace-hero compact-hero" aria-label="Market intelligence command center">
+            <div class="workspace-hero-copy">
+              <div class="hero-title-row"><h1>Market Intelligence</h1><span class="hero-live-chip"><i></i> Model Paper · Broker NONE</span></div>
+            </div>
+            <div class="hero-command-stack">
+              <button id="runEndToEnd" class="e2e-run-button compact" type="button">
+                <span class="e2e-run-icon">▶</span><span><b>Run End-to-End</b></span>
+              </button>
+              <span id="e2eRunState" class="e2e-state ready"><i></i><b>READY</b></span>
+            </div>
+          </section>
+          <section class="terminal-market-tape" aria-label="Live market and trust status">
+            <div id="workspacePulse" class="terminal-market-cells">
+              <span class="tape-item"><small>NIFTY 50</small><b>—</b><em>—</em></span>
+              <span class="tape-item"><small>BREADTH</small><b>—</b><em>—</em></span>
+              <span class="tape-item"><small>INDIA VIX</small><b>—</b><em>—</em></span>
+              <span class="tape-item"><small>SYSTEM</small><b>—</b><em>—</em></span>
+            </div>
+            <div class="terminal-market-truth">
+              <span id="workspaceLiveState" class="live-truth-badge unavailable"><i></i><b>WAITING</b><small>Validating evidence</small></span>
+              <span id="workspaceAsOf" class="as-of">Awaiting snapshot</span>
+            </div>
+          </section>
+
+          <section id="actionablePanel" class="actionable-panel terminal-section trade-ready-prime">
+            <div id="workspaceStats" hidden></div>
+            <div class="actionable-commandbar">
+              <div class="actionable-command-title">
+                <span class="terminal-section-index">01</span>
+                <div>
+                  <p class="eyebrow">ACTIONABLE NOW</p>
+                  <h1>Trade-ready decisions</h1>
+                </div>
+                <span id="finalSignalCount" class="final-signal-count">0 actionable</span>
+              </div>
+              <div class="simple-panel-controls">
+                <div class="segmented compact" data-workspace-signal-mode aria-label="Actionable desk filter">
+                  <button class="active" data-mode="all">All</button>
+                  <button data-mode="intraday">Intraday</button>
+                  <button data-mode="delivery">Delivery</button>
+                </div>
+                <div class="segmented compact" data-workspace-signal-limit aria-label="Actionable row limit">
+                  <button class="active" data-limit="5">Top 5</button>
+                  <button data-limit="10">Top 10</button>
+                </div>
+              </div>
+            </div>
+            <div class="terminal-subline">
+              <span>Canonical final decisions only</span>
+              <span>Entry · Target · SL · R:R are authority-owned</span>
+              <span>Stale / incomplete evidence = unavailable</span>
+            </div>
+            <div class="table-wrap actionable-table-wrap">
+              <table class="actionable-table terminal-trade-table compact-decision-table">
+                <thead><tr>
+                  <th></th><th>Stock</th><th>Action</th><th>LTP / %</th>
+                  <th class="trade-geometry-head">Entry</th><th class="trade-geometry-head">T1 / SL</th>
+                  <th>R:R</th><th>Status</th>
+                </tr></thead>
+                <tbody id="topEntriesRows"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="r7PerformanceCockpit" class="r7-cockpit" aria-label="Performance and decision overview">
+            <details class="workspace-collapse performance-pulse-collapse">
+              <summary><span><b>Performance pulse</b><small>Model Paper equity · accuracy · net P&amp;L</small></span><i>Expand</i></summary>
+              <div class="workspace-collapse-body performance-pulse-body">
+            <article id="r7EquityPanel" class="r7-equity-panel" data-trend="neutral">
+              <div class="r7-panel-title-row"><div><p class="eyebrow">MODEL PAPER EQUITY</p><h2>Performance pulse</h2></div><div class="r7-graph-meta"><span id="r7EquityState" class="r7-status-dot">Post-cost settled equity</span><strong id="r7EquityValue">—</strong></div></div>
+              <div class="r7-graph-wrap"><svg id="r7EquityGraph" viewBox="0 0 760 146" preserveAspectRatio="none" role="img" aria-label="Cumulative Model Paper net P and L"><defs><linearGradient id="r7EquityFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" class="r7-equity-fill-top"></stop><stop offset="100%" class="r7-equity-fill-bottom"></stop></linearGradient></defs><line class="r7-graph-grid" x1="0" y1="36.5" x2="760" y2="36.5"></line><line class="r7-graph-grid" x1="0" y1="109.5" x2="760" y2="109.5"></line><line class="r7-graph-zero" x1="0" y1="73" x2="760" y2="73"></line><path id="r7EquityArea" class="r7-graph-area" d=""></path><path id="r7EquityLine" class="r7-graph-line" d=""></path><g id="r7EquityDots"></g></svg><div id="r7GraphEmpty" class="r7-graph-empty">Settled Model Paper outcomes will build the equity curve here.</div></div>
+              <div class="r7-graph-foot"><span><i class="r7-legend-line"></i> Final / Model Paper post-cost equity only</span><span id="r7SettledRange">Research performance is measured separately</span></div>
+            </article>
+            <aside class="r7-quick-stats" aria-label="Quick metrics">
+              <div class="r7-quick-stat actionable"><span class="r7-metric-icon">A</span><span class="eyebrow">ACTIONABLE</span><strong id="r7ActionableStat">0</strong><small>canonical final decisions</small></div>
+              <div class="r7-quick-stat research"><span class="r7-metric-icon">R</span><span class="eyebrow">RESEARCH</span><strong id="r7ResearchStat">0</strong><small id="r7ResearchSub">tracked separately</small></div>
+              <div class="r7-quick-stat accuracy"><span class="r7-metric-icon">%</span><span class="eyebrow">FINAL ACCURACY</span><strong id="r7AccuracyStat">—</strong><small id="r7AccuracySub">no settled sample</small></div>
+              <div class="r7-quick-stat pnl"><span class="r7-metric-icon">₹</span><span class="eyebrow">NET P&amp;L</span><strong id="r7PnlStat">—</strong><small>post-cost Model Paper</small></div>
+            </aside>
+              </div>
+            </details>
+          </section>
+
+          <section id="workspaceSupportGrid" class="workspace-two-column">
+            <section id="watchNextPanel" class="watch-next-panel terminal-section">
+              <details class="workspace-collapse watch-next-collapse">
+                <summary><span><b>Closest to admission</b><small>Research only · expand ranked candidates</small></span><i>Expand</i></summary>
+                <div class="workspace-collapse-body">
+              <div class="simple-panel-heading compact-terminal-heading">
+                <div>
+                  <p class="eyebrow">WATCH NEXT</p>
+                  <h2>Closest to admission</h2>
+                  <p class="muted">Research evidence only — never styled as a live trade.</p><span id="watchNextMeta" class="watch-next-meta">Coverage warming</span>
+                </div>
+                <button class="text-button" data-open-page="opportunities">View research watch</button>
+              </div>
+              <div class="table-wrap watch-next-wrap">
+                <table class="watch-next-table">
+                  <thead><tr><th>#</th><th>Stock</th><th>Mode</th><th>Setup</th><th>Evidence</th><th>LTP</th><th>Waiting for</th><th>Age</th><th>Stage</th></tr></thead>
+                  <tbody id="watchNextRows"></tbody>
+                </table>
+              </div>
+                </div>
+              </details>
+            </section>
+
+            <section id="recentOutcomesPanel" class="recent-outcomes-panel terminal-section">
+              <div class="simple-panel-heading compact-terminal-heading">
+                <div>
+                  <p class="eyebrow">RECENT OUTCOMES</p>
+                  <h2>Measured trade results</h2>
+                  <p class="muted">Result is immutable. After is a separate post-exit observation.</p>
+                </div>
+                <button class="text-button" data-open-page="accuracy">Full accuracy</button>
+              </div>
+              <div class="table-wrap recent-outcomes-wrap">
+                <table class="recent-outcomes-table">
+                  <thead><tr><th>Stock</th><th>Mode</th><th>Result</th><th>Outcome</th><th>Net P&amp;L</th><th>R</th><th>Held</th><th>After</th></tr></thead>
+                  <tbody id="workspaceOutcomeRows"></tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+
+          <section class="workspace-secondary-rail">
+            <div id="marketDecisionRail" class="market-decision-rail simple-market-detail"><div class="empty">Loading market context…</div></div>
+            <div class="workspace-diagnostics-link">
+              <span><b>Engineering details stay out of the trading workflow.</b><small id="workspaceSystemNote">Runtime diagnostics are available separately.</small></span>
+              <button class="secondary-button" data-open-page="system" type="button">Open diagnostics</button>
+            </div>
+            <div id="deskCards" hidden></div>
+          </section>
+        </section>
+
+        <section class="page" data-page-panel="report">
+          <div id="stockReportHeading" class="page-heading stock-report-heading"><div class="stock-heading-line"><span class="eyebrow">STOCK INTELLIGENCE</span><span class="stock-heading-sep">|</span><h1 id="reportTitle">Stock Report</h1><span class="stock-heading-sep">|</span><span id="reportSubtitle">Search a stock to open its canonical report.</span></div><div id="quoteState" class="state-pill neutral">No stock selected</div></div>
+          <div id="reportLoading" class="loading-strip" hidden>Loading local projections…</div>
+          <div id="quoteStats" class="stat-grid four"></div>
+          <div id="priceChangeStrip" class="price-change-strip" aria-label="Price change by period"></div>
+          <div id="deskDecisionStrip" class="desk-decision-strip" aria-label="Delivery and Intraday decisions"></div>
+          <section class="panel chart-disabled-panel broker-chart-panel"><div class="panel-heading"><div><p class="eyebrow">BROKER CHART</p><h2>Live price action stays in Upstox</h2></div><a class="secondary-button broker-chart-link" href="https://tv.upstox.com" target="_blank" rel="noopener noreferrer">Open Upstox chart ↗</a></div><p class="muted">Laddu is the intelligence and decision layer. Its internal recreated chart is disabled and cannot influence a trade.</p></section>
+          <section class="panel chart-panel" hidden data-internal-chart-disabled="true">
+            <div class="mtf-bar">
+              <div class="mtf-title"><span>MTF</span><b id="mtfStatus">0/10</b></div>
+              <div id="mtfStrip" class="mtf-strip" aria-label="Multi-timeframe trend summary"><span class="muted">Select a stock to load MTF evidence.</span></div>
+            </div>
+            <div class="chart-toolbar">
+              <span class="chart-toolbar-hint">Click an MTF cell to switch candle timeframe</span>
+              <div class="chart-actions"><span id="chartAsOf" class="as-of">No chart</span><button id="maximizeChart" class="secondary-button" type="button" title="Maximize chart">Maximize</button><button id="fitChart" class="secondary-button" type="button">Fit</button><button id="followLive" class="secondary-button active" type="button">Follow live</button></div>
+            </div>
+            <div class="chart-overlay-toolbar" id="chartOverlayButtons" aria-label="Chart overlays">
+              <span class="chart-row-label">Indicators</span>
+              <button class="tool-toggle active" type="button" data-overlay="volume" aria-pressed="true">Volume</button>
+              <button class="tool-toggle active" type="button" data-overlay="trade" aria-pressed="true">S/R + Entry/T1/SL</button>
+              <button class="tool-toggle active" type="button" data-overlay="major_sr" aria-pressed="true">Major S/R</button>
+              <button class="tool-toggle" type="button" data-overlay="vwap" aria-pressed="false">VWAP</button>
+              <button class="tool-toggle" type="button" data-overlay="ema" aria-pressed="false">EMA20/50</button>
+              <button class="tool-toggle" type="button" data-overlay="supertrend" aria-pressed="false">Supertrend</button>
+              <button class="tool-toggle" type="button" data-overlay="rsi" aria-pressed="false">RSI</button>
+              <button class="tool-toggle" type="button" data-overlay="macd" aria-pressed="false">MACD</button>
+              
+            </div>
+            <div id="indicatorReadout" class="indicator-readout"><span>Indicator projection will appear with chart data.</span></div>
+            <div id="chartHost" class="chart-host"><div id="chartMessage" class="chart-message">Search a stock to load its chart.</div></div>
+            <div id="volumePane" class="indicator-pane volume-pane">
+              <header><b>Volume</b><span id="volumeState">Waiting for verified volume</span></header>
+              <div id="volumeChart" class="indicator-chart" aria-label="Timeframe aligned volume"></div>
+            </div>
+            <div id="rsiPane" class="indicator-pane" hidden>
+              <header><b>RSI · 20 / 50 / 80</b><span id="rsiState">Projection pending</span></header>
+              <div id="rsiChart" class="indicator-chart" aria-label="RSI panel"></div>
+            </div>
+            <div id="macdPane" class="indicator-pane" hidden>
+              <header><b>MACD · Signal · Histogram</b><span id="macdState">Projection pending</span></header>
+              <div id="macdChart" class="indicator-chart" aria-label="MACD panel"></div>
+            </div>
+            <div class="chart-footer"><span>Pan left for older history · timeframe changes real candle aggregation</span><span id="chartContract">Bounded 500-bar session-first view · time axis IST</span></div>
+          </section>
+          <section class="panel compact-decision-panel"><div class="decision-inline-head"><div><p class="eyebrow">DECISION &amp; RISK</p><h2 id="decisionContextTitle">Selected desk</h2></div><span id="decisionState" class="state-pill neutral">Unavailable</span></div><div id="tradeMap" class="decision-line"></div><div id="decisionWhy" class="decision-why"></div></section>
+          <section class="panel evidence-panel"><details class="customer-details"><summary><span><b>Evidence &amp; methodology</b><small>Levels, fundamentals, lineage and diagnostics</small></span></summary><div id="secondaryEvidence" class="secondary-grid"></div><details><summary>Diagnostic payload</summary><pre id="stockDiagnostics"></pre></details></details></section>
+        </section>
+
+        <section class="page" data-page-panel="opportunities">
+          <div class="action-bar opportunity-action-bar"><div class="segmented compact"><button class="active" data-desk="intraday">Intraday</button><button data-desk="delivery">Delivery</button></div><div class="opportunity-run-state"><b id="scanRunState">Latest persisted projection</b><span id="scanRunMeta">Universe and stage evidence will appear here.</span></div><button id="runScan" type="button">Start authorized scan</button></div>
+          <div id="scannerStats" class="stat-grid four"></div>
+          <details id="gatedDetails" class="compact-explain"><summary>Why candidates were gated or rejected</summary><div id="gatedSummary" class="gated-summary"></div><div class="table-wrap compact-table"><table><thead><tr><th>Symbol</th><th>Stage</th><th>Reason</th><th>Observed</th></tr></thead><tbody id="gatedRows"></tbody></table></div></details>
+          <section class="panel"><div class="panel-heading"><div><p class="eyebrow">RANKED</p><h2>Research candidates</h2></div><span class="muted">Sorted best-first by canonical stage, evidence score and freshness.</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Symbol</th><th>Setup</th><th>State</th><th>Current / captured</th><th>Entry</th><th>Target</th><th>Stop</th><th>R:R</th><th>Evidence</th><th>Why</th></tr></thead><tbody id="candidateRows"></tbody></table></div><div id="candidateInspectPanel" class="candidate-inspect-panel" hidden></div></section>
+        </section>
+
+
+        <section class="page" data-page-panel="model-paper">
+          <div class="model-paper-topline"><div class="model-paper-title"><span class="eyebrow">MODEL PAPER</span><b>Canonical Final + persisted Research history</b><span id="modelPaperState" class="state-pill neutral">Loading</span></div><div class="model-paper-controls"><div class="segmented compact" data-model-paper-book><button class="active" data-book="final">Final</button><button data-book="research">Research</button></div><div class="segmented compact" data-model-paper-scope><button class="active" data-scope="all">All history</button><button data-scope="open">Open / active</button><button data-scope="today">Today</button></div></div></div>
+          <div id="modelPaperStats" class="model-paper-stats"></div>
+          <div id="modelPaperSources" class="model-paper-source-strip"><span>Loading persisted authorities…</span></div>
+          <div id="modelPaperBlocker" class="model-paper-blocker"></div>
+          <section class="panel model-paper-panel"><div class="table-wrap"><table class="model-paper-table"><thead><tr><th>Symbol</th><th>Desk</th><th>State</th><th>Action</th><th>Entry</th><th>T1</th><th>SL</th><th>Qty</th><th>P&amp;L / Research Perf</th><th>Outcome</th><th>Age / First Seen</th></tr></thead><tbody id="modelPaperRows"></tbody></table></div></section>
+        </section>
+
+        <section class="page" data-page-panel="accuracy">
+          <div class="page-heading"><div><p class="eyebrow">FORWARD + HISTORICAL EVIDENCE</p><h1>Accuracy &amp; Performance</h1><p>Simple customer view of settled signal quality, post-cost economics and historical evidence.</p></div><div id="accuracyState" class="state-pill neutral">Loading</div></div>
+          <div class="customer-summary-strip"><span>Forward / Model Paper</span><b>Accuracy + post-cost economics</b><span>Historical Backtest kept separate</span></div><div class="filter-bar"><div class="segmented" data-metric-mode><button class="active" data-mode="all">All</button><button data-mode="delivery">Delivery</button><button data-mode="intraday">Intraday</button></div><button id="refreshAccuracy" class="secondary-button">Refresh projection</button></div>
+          <div id="accuracyStats" class="stat-grid eight"></div>
+          <div id="accuracySettlementStrip" class="settlement-strip"></div>
+          <section class="panel compact-settlement-panel"><div class="panel-heading compact-heading"><div><p class="eyebrow">CANONICAL FINAL ONLY</p><h2>Final Decision Performance</h2></div><span class="muted">Click symbol for exact Stock Intelligence</span></div><div class="table-wrap"><table class="settlement-table"><thead><tr><th>Symbol</th><th>Desk</th><th>Action</th><th>Outcome</th><th>Entry</th><th>Exit</th><th>Net P&amp;L</th><th>Costs</th><th>R</th><th>Settled</th></tr></thead><tbody id="accuracyRows"></tbody></table></div></section>
+          <section class="panel customer-performance-panel"><div class="panel-heading compact-heading"><div><p class="eyebrow">ACTUAL PAPER LIFECYCLE</p><h2>Model Paper Performance</h2></div><div id="performanceState" class="state-pill neutral">Loading</div></div><div class="filter-bar compact-customer-filters"><div class="segmented compact" data-performance-period><button class="active" data-period="all">All</button><button data-period="today">Today</button><button data-period="week">Week</button><button data-period="month">Month</button><button data-period="year">Year</button></div><div class="segmented compact" data-performance-mode><button class="active" data-mode="all">All</button><button data-mode="delivery">Delivery</button><button data-mode="intraday">Intraday</button></div></div><div id="performanceStats" class="stat-grid eight"></div><div id="performanceSettlementStrip" class="settlement-strip"></div><div class="table-wrap"><table class="settlement-table"><thead><tr><th>Symbol</th><th>Desk</th><th>Action</th><th>Outcome</th><th>Qty</th><th>Gross</th><th>Costs</th><th>Net P&amp;L</th><th>R</th><th>Settled</th></tr></thead><tbody id="performanceRows"></tbody></table></div><details class="customer-details"><summary><span><b>Evidence &amp; reconciliation</b><small>Cost authority, exclusions and open positions</small></span></summary><div class="content-grid equal"><div id="performanceContract" class="prose"></div><div id="openPositionSummary" class="prose"></div><div id="accuracyContract" class="prose"></div><div id="accuracyReconciliation" class="prose"></div></div></details></section>
+          <section class="panel backtest-terminal-panel"><div class="panel-heading compact-heading"><div><p class="eyebrow">HISTORICAL BACKTEST</p><h2>How the method performed historically</h2></div><div id="backtestState" class="state-pill neutral">Ready to run</div></div><div class="backtest-terminal-controls"><label>Desk<select id="backtestPageDesk"><option value="delivery">Delivery</option><option value="intraday">Intraday</option></select></label><label>Folds<select id="backtestPageFolds"><option value="3">3</option><option value="5">5</option><option value="8" selected>8</option></select></label><label>Profile<select id="backtestPageProfile"><option value="capital" selected>Capital</option></select></label><span class="backtest-fixed-rule">Purge ON · Embargo 1d · Cached point-in-time</span><button id="runBacktestPage" class="secondary-button" type="button">Run Backtest</button></div><div id="backtestPageResults"><div class="empty">Run Backtest to compare Mathematical, ML Challenger and Hybrid on the same persisted population.</div></div></section>
+        </section>
+
+        <section class="page legacy-page" data-page-panel="performance"></section>
+        <section class="page legacy-page" data-page-panel="backtest"></section>
+
+        <section class="page" data-page-panel="research">
+          <div class="page-heading"><div><p class="eyebrow">GOVERNED EVIDENCE</p><h1>Research &amp; Learning</h1><p>Recovered model progress, governed historical replay and concise promotion blockers; no training on page load.</p></div><div class="research-heading-actions"><div id="researchState" class="state-pill neutral">Loading</div><button id="advanceLifecycle" class="secondary-button" type="button">Advance lifecycle</button></div></div><div id="lifecycleAdvanceState" class="lifecycle-advance-state" hidden></div>
+          <div id="researchStats" class="stat-grid four"></div><div id="researchTruthStrip" class="research-truth-strip"></div>
+          <section class="panel persistent-research-panel"><div class="panel-heading"><div><p class="eyebrow">RESEARCH PERFORMANCE + DURABLE HISTORY</p><h2>Published candidates never disappear</h2></div><span class="muted">Scanner rerank moves candidates to history; identity and first-seen time remain.</span></div><div id="researchCandidateStats" class="model-paper-stats research-performance-stats"></div><div class="research-history-policy">Research counterfactual only — never included in Final Decision or Model Paper performance.</div><div class="research-filter-bar"><div class="segmented compact" data-research-scope><button class="active" data-value="all">All history</button><button data-value="active">Active</button><button data-value="history">History</button></div><div class="segmented compact" data-research-mode><button class="active" data-value="all">All desks</button><button data-value="intraday">Intraday</button><button data-value="delivery">Delivery</button></div><div class="segmented compact" data-research-outcome><button class="active" data-value="all">All outcomes</button><button data-value="open">Open</button><button data-value="success">Success</button><button data-value="failure">Failure</button><button data-value="promoted">Promoted</button></div></div><div class="table-wrap research-history-wrap"><table class="research-history-table"><thead><tr><th>Stock</th><th>Mode</th><th>Score</th><th>Setup</th><th>Research Price</th><th>LTP</th><th>Target</th><th>SL</th><th>Current %</th><th>Current R</th><th>First Seen</th><th>Age</th><th>Holding</th><th>Stage</th><th>Waiting For / Reason</th><th>Outcome</th></tr></thead><tbody id="researchCandidateHistoryRows"></tbody></table></div><div class="research-pagination"><button id="researchPrev" class="secondary-button" type="button">Previous</button><span id="researchPageState">0 candidates</span><button id="researchNext" class="secondary-button" type="button">Next</button></div></section>
+          <section class="panel compact-research-panel"><div class="panel-heading compact-heading"><div><p class="eyebrow">CONTINUITY</p><h2>Recovered model / walk-forward state</h2></div><span class="state-pill neutral">Persisted evidence</span></div><div id="researchLifecycle" class="research-lifecycle"><div class="empty">Loading persisted model state…</div></div><div id="researchContinuityNote" class="research-continuity-note"></div></section>
+          <section class="panel"><details><summary>Methods and production boundary</summary><div class="table-wrap"><table><thead><tr><th>Method</th><th>Status</th><th>Desks</th><th>Responsibility</th><th>Outputs</th><th>Production boundary</th></tr></thead><tbody id="researchRows"></tbody></table></div></details></section>
+        </section>
+
+        <section class="page" data-page-panel="system">
+          <div class="page-heading"><div><p class="eyebrow">ENGINEERING ONLY</p><h1>Diagnostics &amp; Proof</h1><p>Runtime jobs, blockers and evidence are intentionally separated from the trading workflow.</p></div><div class="system-heading-actions"><div class="section-page-controls" aria-label="Section visibility"><button id="expandSystemSections" class="secondary-button" type="button">Expand all</button><button id="collapseSystemSections" class="secondary-button" type="button">Collapse all</button></div><div id="systemState" class="state-pill neutral">Loading</div></div></div>
+          <div id="systemStats" class="stat-grid four"></div>
+          <section id="opsRootCause" class="ops-root-cause warming"><div><span>ROOT CAUSE</span><b>Loading dependency truth…</b><p>Resolving active blockers to their shared dependency.</p></div></section>
+
+          <section class="panel ops-control-panel">
+            <div class="panel-heading"><div><p class="eyebrow">OPERATOR ACTIONS</p><h2>Controls</h2></div><div class="ops-heading-actions"><span id="opsAutoState" class="state-pill neutral">Auto refresh · 2.5s</span><button id="refreshOperations" class="secondary-button" type="button">Refresh now</button><button id="copyOperations" class="secondary-button" type="button">Copy all</button></div></div>
+            <div class="ops-quick-grid">
+              <article class="ops-quick-card" data-ops-card="intraday"><div><span>Intraday Scanner</span><b id="opsIntradayState">Loading</b><small id="opsIntradayMeta">Waiting for runtime projection…</small></div><button type="button" data-quick-operation="intraday_scan">Start / Sync</button></article>
+              <article class="ops-quick-card" data-ops-card="delivery"><div><span>Delivery Scanner</span><b id="opsDeliveryState">Loading</b><small id="opsDeliveryMeta">Waiting for runtime projection…</small></div><button type="button" data-quick-operation="delivery_scan">Start / Sync</button></article>
+              <article class="ops-quick-card" data-ops-card="research"><div><span>ML / Research / Settlement</span><b id="opsResearchState">Loading</b><small id="opsResearchMeta">Persisted lifecycle evidence</small></div><button type="button" data-quick-operation="research_advance">Advance</button></article>
+              <article class="ops-quick-card" data-ops-card="data"><div><span>Delivery Data Sync</span><b id="opsDataState">Loading</b><small id="opsDataMeta">Exact retained/live data authority</small></div><button type="button" data-quick-operation="delivery_sync">Sync</button></article>
+              <article class="ops-quick-card" data-ops-card="forward"><div><span>Forward / Level-5 Evidence</span><b id="opsForwardState">Loading</b><small id="opsForwardMeta">Real forward clock only</small></div><button type="button" data-quick-operation="forward_refresh">Refresh proof</button></article>
+              <article class="ops-quick-card ops-lifecycle-card" data-ops-card="lifecycle"><div><span>Full Lifecycle Closure</span><b id="opsLifecycleState">Ready to run</b><small id="opsLifecycleMeta">Scanner → Research → Paper → Settlement → WFA → reconciliation</small></div><button type="button" data-quick-operation="full_lifecycle">Run one-shot proof</button></article>
+              <article class="ops-quick-card" data-ops-card="recovery"><div><span>Safe Recovery</span><b id="opsRecoveryState">No action requested</b><small>Only allow-listed non-risk recovery actions</small></div><button type="button" data-quick-operation="safe_recovery">Recover safe stuck</button></article>
+            </div>
+          </section>
+
+          <section class="panel"><div class="panel-heading"><div><p class="eyebrow">ACTIVE WORK</p><h2>What is moving now</h2></div><span class="muted">Business-state progress · highest attention first</span></div><div id="operationsJobs" class="ops-job-grid"><div class="empty">Loading operational jobs…</div></div></section>
+          <section class="panel ops-error-panel"><div class="panel-heading"><div><p class="eyebrow">ACTION REQUIRED</p><h2>Failures &amp; blockers</h2></div><div class="ops-heading-actions"><span id="opsActiveProblemCount" class="state-pill ready">0 active</span><button id="copyErrors" class="secondary-button" type="button">Copy active</button></div></div><div id="operationsErrors"><div class="ops-all-clear"><b>No active failure/blocker is projected.</b><span>Runtime problems will appear here only when action is required.</span></div></div></section>
+          <section class="panel ops-evidence-panel"><div class="panel-heading"><div><p class="eyebrow">EVIDENCE GAPS</p><h2>Pending proof · not runtime failure</h2></div><div class="ops-heading-actions"><span id="opsEvidencePendingCount" class="state-pill warning">0 pending</span><button id="copyEvidence" class="secondary-button" type="button">Copy evidence</button></div></div><div id="operationsEvidence"><div class="empty">No pending evidence projection loaded yet.</div></div></section>
+          <section class="panel"><div class="panel-heading"><div><p class="eyebrow">ACTION / EVIDENCE CONSOLE</p><h2>Latest exact response</h2></div><button id="copyOpsConsole" class="secondary-button" type="button">Copy console</button></div><pre id="operationsConsole">No action has been run from this screen yet.</pre></section>
+
+          <div class="content-grid equal"><section class="panel"><div class="panel-heading"><h2>Product contracts</h2></div><div id="systemContracts" class="prose"></div></section><section class="panel"><div class="panel-heading"><h2>Safe operator guidance</h2></div><div class="prose"><p>Trader reads are cache-only. A degraded research or backfill plane must not block live data, Stock Intelligence, scanner progress, Accuracy, or Performance.</p><p>Buttons here can request only existing bounded actions. They cannot grant broker authority, alter risk authority, or turn historical replay into forward evidence.</p></div></section></div>
+          <section class="panel"><details><summary>Raw current health envelope</summary><pre id="systemDiagnostics"></pre></details></section>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div class="compatibility-dom" hidden aria-hidden="true"><select id="backtestDesk"><option value="delivery">Delivery</option></select><select id="backtestFolds"><option value="8">8</option></select><button id="runBacktest" type="button">Run</button><span id="backtestHorizonHint"></span><div id="backtestResults"></div></div>
+  <div id="toast" class="toast" hidden></div>
+  <script src="/app.js?v=131.1.6-r8-pl46-defect-cluster-closure-8086&ui=7"></script>
+</body>
+</html>
